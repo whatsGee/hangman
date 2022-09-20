@@ -4,8 +4,6 @@
  */
 package com.mycompany.hangman;
 import java.util.Random;
-import java.time.LocalDateTime;  
-import java.time.format.DateTimeFormatter;
 
 /**
  *
@@ -19,12 +17,11 @@ public class Game extends javax.swing.JFrame {
         initComponents();
         jLabel1.setVisible(false);
         jLabel5.setVisible(false);
-        popPanel.setVisible(false);
+        popLose.setVisible(false);
+        popWin.setVisible(false);
         popSkip.setVisible(false);
         initial();
         getPanels();
-        curDateAndTime();
-        dateAndTime.setVisible(true);
         
     }
 
@@ -37,15 +34,6 @@ public class Game extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        popSkip = new javax.swing.JLayeredPane();
-        jLabel15 = new javax.swing.JLabel();
-        gameOverBtn = new javax.swing.JButton();
-        jLabel16 = new javax.swing.JLabel();
-        popPanel = new javax.swing.JLayeredPane();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        noChoice = new javax.swing.JButton();
-        yesChoice = new javax.swing.JButton();
         backScores = new javax.swing.JButton();
         z = new javax.swing.JButton();
         x = new javax.swing.JButton();
@@ -87,82 +75,25 @@ public class Game extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         dateAndTime = new javax.swing.JLabel();
+        popSkip = new javax.swing.JLayeredPane();
+        jLabel15 = new javax.swing.JLabel();
+        gameOverBtn = new javax.swing.JButton();
+        jLabel16 = new javax.swing.JLabel();
+        popLose = new javax.swing.JLayeredPane();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        noChoice = new javax.swing.JButton();
+        yesChoice = new javax.swing.JButton();
+        popWin = new javax.swing.JLayeredPane();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        noChoice1 = new javax.swing.JButton();
+        yesChoice1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Start Game");
         setResizable(false);
         getContentPane().setLayout(null);
-
-        popSkip.setBackground(new java.awt.Color(153, 153, 153));
-        popSkip.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        popSkip.setOpaque(true);
-
-        jLabel15.setFont(new java.awt.Font("Sitka Text", 1, 24)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel15.setText("Game Over!");
-        popSkip.add(jLabel15);
-        jLabel15.setBounds(20, 20, 150, 50);
-
-        gameOverBtn.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        gameOverBtn.setText("End");
-        gameOverBtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        gameOverBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                gameOverBtnActionPerformed(evt);
-            }
-        });
-        popSkip.add(gameOverBtn);
-        gameOverBtn.setBounds(60, 90, 60, 21);
-
-        jLabel16.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel16.setText("Score: 0");
-        popSkip.add(jLabel16);
-        jLabel16.setBounds(60, 60, 60, 16);
-
-        popPanel.setBackground(new java.awt.Color(153, 153, 153));
-        popPanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        popPanel.setOpaque(true);
-
-        jLabel13.setFont(new java.awt.Font("Sitka Text", 1, 24)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel13.setText("You Lost!");
-        popPanel.add(jLabel13);
-        jLabel13.setBounds(40, 20, 110, 50);
-
-        jLabel14.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel14.setText("Try Again?");
-        popPanel.add(jLabel14);
-        jLabel14.setBounds(60, 60, 70, 15);
-
-        noChoice.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        noChoice.setText("No");
-        noChoice.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        noChoice.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                noChoiceActionPerformed(evt);
-            }
-        });
-        popPanel.add(noChoice);
-        noChoice.setBounds(110, 90, 60, 21);
-
-        yesChoice.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        yesChoice.setText("Yes");
-        yesChoice.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        yesChoice.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                yesChoiceActionPerformed(evt);
-            }
-        });
-        popPanel.add(yesChoice);
-        yesChoice.setBounds(20, 90, 60, 21);
-
-        popSkip.add(popPanel);
-        popPanel.setBounds(0, 0, 190, 130);
-
-        getContentPane().add(popSkip);
-        popSkip.setBounds(30, 20, 180, 130);
 
         backScores.setBackground(new java.awt.Color(153, 153, 153));
         backScores.setFont(new java.awt.Font("Maiandra GD", 1, 14)); // NOI18N
@@ -174,7 +105,7 @@ public class Game extends javax.swing.JFrame {
             }
         });
         getContentPane().add(backScores);
-        backScores.setBounds(10, 340, 72, 23);
+        backScores.setBounds(10, 340, 72, 25);
 
         z.setText("Z");
         z.addActionListener(new java.awt.event.ActionListener() {
@@ -485,11 +416,123 @@ public class Game extends javax.swing.JFrame {
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Score");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(520, 10, 80, 17);
+        jLabel2.setBounds(520, 10, 80, 16);
 
         dateAndTime.setText("dateAndTime");
         getContentPane().add(dateAndTime);
         dateAndTime.setBounds(330, 0, 170, 30);
+
+        popSkip.setBackground(new java.awt.Color(153, 153, 153));
+        popSkip.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        popSkip.setOpaque(true);
+
+        jLabel15.setFont(new java.awt.Font("Sitka Text", 1, 24)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setText("Game Over!");
+        popSkip.add(jLabel15);
+        jLabel15.setBounds(20, 20, 150, 50);
+
+        gameOverBtn.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        gameOverBtn.setText("End");
+        gameOverBtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        gameOverBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gameOverBtnActionPerformed(evt);
+            }
+        });
+        popSkip.add(gameOverBtn);
+        gameOverBtn.setBounds(60, 90, 60, 21);
+
+        jLabel16.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel16.setText("Score: 0");
+        popSkip.add(jLabel16);
+        jLabel16.setBounds(60, 60, 60, 16);
+
+        getContentPane().add(popSkip);
+        popSkip.setBounds(10, 0, 180, 130);
+
+        popLose.setBackground(new java.awt.Color(153, 153, 153));
+        popLose.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        popLose.setOpaque(true);
+
+        jLabel13.setFont(new java.awt.Font("Sitka Text", 1, 24)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setText("You Lost!");
+        popLose.add(jLabel13);
+        jLabel13.setBounds(40, 20, 110, 50);
+
+        jLabel14.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setText("Try Again?");
+        popLose.add(jLabel14);
+        jLabel14.setBounds(60, 60, 70, 17);
+
+        noChoice.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        noChoice.setText("No");
+        noChoice.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        noChoice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                noChoiceActionPerformed(evt);
+            }
+        });
+        popLose.add(noChoice);
+        noChoice.setBounds(110, 90, 60, 21);
+
+        yesChoice.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        yesChoice.setText("Yes");
+        yesChoice.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        yesChoice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                yesChoiceActionPerformed(evt);
+            }
+        });
+        popLose.add(yesChoice);
+        yesChoice.setBounds(20, 90, 60, 21);
+
+        getContentPane().add(popLose);
+        popLose.setBounds(0, 0, 190, 130);
+
+        popWin.setBackground(new java.awt.Color(153, 153, 153));
+        popWin.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        popWin.setOpaque(true);
+
+        jLabel17.setFont(new java.awt.Font("Sitka Text", 1, 24)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel17.setText("You Won!");
+        popWin.add(jLabel17);
+        jLabel17.setBounds(40, 20, 114, 50);
+
+        jLabel18.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel18.setText("Try Again?");
+        popWin.add(jLabel18);
+        jLabel18.setBounds(60, 60, 70, 17);
+
+        noChoice1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        noChoice1.setText("No");
+        noChoice1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        noChoice1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                noChoice1ActionPerformed(evt);
+            }
+        });
+        popWin.add(noChoice1);
+        noChoice1.setBounds(110, 90, 60, 21);
+
+        yesChoice1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        yesChoice1.setText("Yes");
+        yesChoice1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        yesChoice1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                yesChoice1ActionPerformed(evt);
+            }
+        });
+        popWin.add(yesChoice1);
+        yesChoice1.setBounds(20, 90, 60, 21);
+
+        getContentPane().add(popWin);
+        popWin.setBounds(0, 0, 190, 130);
 
         setSize(new java.awt.Dimension(616, 408));
         setLocationRelativeTo(null);
@@ -677,6 +720,16 @@ public class Game extends javax.swing.JFrame {
         new Menu().setVisible(true);
     }//GEN-LAST:event_gameOverBtnActionPerformed
 
+    private void noChoice1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_noChoice1ActionPerformed
+        dispose();
+        new Menu().setVisible(true);// TODO add your handling code here:
+    }//GEN-LAST:event_noChoice1ActionPerformed
+
+    private void yesChoice1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yesChoice1ActionPerformed
+       dispose();
+       new Game().setVisible(true); // TODO add your handling code here:
+    }//GEN-LAST:event_yesChoice1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -726,13 +779,6 @@ public class Game extends javax.swing.JFrame {
         });
     }
     
-    public void curDateAndTime()
-    {
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM/dd/yyyy HH:mm:ss");
-        LocalDateTime now = LocalDateTime.now();
-        dateAndTime.setText(dtf.format(now));
-    }
-    
     public String getRandomWord()
     {
         Random random = new Random();
@@ -766,7 +812,7 @@ public class Game extends javax.swing.JFrame {
     }
     private void CheckMistakes(){
     if (mistakes == 6){
-        popPanel.setVisible(true);
+        popLose.setVisible(true);
         
     }
 }
@@ -905,12 +951,12 @@ public class Game extends javax.swing.JFrame {
         int stringLength = word.length();
         if(stringLength ==5){
             if(correct == 5){
-                dispose();
+                popWin.setVisible(true);
             }
         }
         else{
             if(correct == 8){
-                dispose();
+                popWin.setVisible(true);
             }
         }
     }
@@ -939,6 +985,8 @@ public class Game extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -952,10 +1000,12 @@ public class Game extends javax.swing.JFrame {
     private javax.swing.JButton m;
     private javax.swing.JButton n;
     private javax.swing.JButton noChoice;
+    private javax.swing.JButton noChoice1;
     private javax.swing.JButton o;
     private javax.swing.JButton p;
-    private javax.swing.JLayeredPane popPanel;
+    private javax.swing.JLayeredPane popLose;
     private javax.swing.JLayeredPane popSkip;
+    private javax.swing.JLayeredPane popWin;
     private javax.swing.JButton q;
     private javax.swing.JButton r;
     private javax.swing.JButton s;
@@ -966,6 +1016,7 @@ public class Game extends javax.swing.JFrame {
     private javax.swing.JButton x;
     private javax.swing.JButton y;
     private javax.swing.JButton yesChoice;
+    private javax.swing.JButton yesChoice1;
     private javax.swing.JButton z;
     // End of variables declaration//GEN-END:variables
 }
