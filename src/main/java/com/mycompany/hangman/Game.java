@@ -4,6 +4,8 @@
  */
 package com.mycompany.hangman;
 import java.util.Random;
+import java.time.LocalDateTime;  
+import java.time.format.DateTimeFormatter;
 
 /**
  *
@@ -22,6 +24,8 @@ public class Game extends javax.swing.JFrame {
         popSkip.setVisible(false);
         initial();
         getPanels();
+        curDateTime();
+        dateAndTime.setVisible(true);
         
     }
 
@@ -777,6 +781,13 @@ public class Game extends javax.swing.JFrame {
                 
             }
         });
+    }
+    
+    public void curDateTime()
+    {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM/dd/yyy HH:mm:ss");
+        LocalDateTime now = LocalDateTime.now();
+        dateAndTime.setText(dtf.format(now));
     }
     
     public String getRandomWord()
