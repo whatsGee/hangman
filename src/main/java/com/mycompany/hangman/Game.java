@@ -867,7 +867,7 @@ public class Game extends javax.swing.JFrame {
         rightArm.setVisible(true);
     else if(mistakes == 5)
         leftLeg.setVisible(true);
-    else{
+    else if(mistakes == 6){
         rightLeg.setVisible(true);
         popLose.setVisible(true);
     }
