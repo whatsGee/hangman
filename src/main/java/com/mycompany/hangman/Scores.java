@@ -140,8 +140,6 @@ public class Scores extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backScores;
-    private javax.swing.JButton backScores1;
     private javax.swing.JButton backScores2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

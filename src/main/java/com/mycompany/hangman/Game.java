@@ -109,7 +109,7 @@ public class Game extends javax.swing.JFrame {
             }
         });
         getContentPane().add(backScores);
-        backScores.setBounds(10, 340, 72, 25);
+        backScores.setBounds(10, 340, 72, 23);
 
         z.setText("Z");
         z.addActionListener(new java.awt.event.ActionListener() {
@@ -420,7 +420,7 @@ public class Game extends javax.swing.JFrame {
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Score");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(520, 10, 80, 16);
+        jLabel2.setBounds(520, 10, 80, 17);
 
         dateAndTime.setText("dateAndTime");
         getContentPane().add(dateAndTime);
@@ -434,7 +434,7 @@ public class Game extends javax.swing.JFrame {
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("Game Over!");
         popSkip.add(jLabel15);
-        jLabel15.setBounds(20, 20, 150, 50);
+        jLabel15.setBounds(20, 20, 160, 50);
 
         gameOverBtn.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         gameOverBtn.setText("End");
@@ -454,7 +454,7 @@ public class Game extends javax.swing.JFrame {
         jLabel16.setBounds(60, 60, 60, 16);
 
         getContentPane().add(popSkip);
-        popSkip.setBounds(10, 0, 180, 130);
+        popSkip.setBounds(0, 0, 250, 140);
 
         popLose.setBackground(new java.awt.Color(153, 153, 153));
         popLose.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -464,13 +464,13 @@ public class Game extends javax.swing.JFrame {
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("You Lost!");
         popLose.add(jLabel13);
-        jLabel13.setBounds(40, 20, 110, 50);
+        jLabel13.setBounds(40, 20, 140, 50);
 
         jLabel14.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("Try Again?");
         popLose.add(jLabel14);
-        jLabel14.setBounds(60, 60, 70, 17);
+        jLabel14.setBounds(60, 60, 70, 15);
 
         noChoice.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         noChoice.setText("No");
@@ -495,7 +495,7 @@ public class Game extends javax.swing.JFrame {
         yesChoice.setBounds(20, 90, 60, 21);
 
         getContentPane().add(popLose);
-        popLose.setBounds(0, 0, 190, 130);
+        popLose.setBounds(0, 0, 250, 140);
 
         popWin.setBackground(new java.awt.Color(153, 153, 153));
         popWin.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -505,13 +505,13 @@ public class Game extends javax.swing.JFrame {
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("You Won!");
         popWin.add(jLabel17);
-        jLabel17.setBounds(40, 20, 114, 50);
+        jLabel17.setBounds(40, 20, 130, 50);
 
         jLabel18.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(255, 255, 255));
         jLabel18.setText("Try Again?");
         popWin.add(jLabel18);
-        jLabel18.setBounds(60, 60, 70, 17);
+        jLabel18.setBounds(60, 60, 70, 15);
 
         noChoice1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         noChoice1.setText("No");
@@ -536,7 +536,7 @@ public class Game extends javax.swing.JFrame {
         yesChoice1.setBounds(20, 90, 60, 21);
 
         getContentPane().add(popWin);
-        popWin.setBounds(0, 0, 190, 130);
+        popWin.setBounds(0, 0, 250, 140);
 
         setSize(new java.awt.Dimension(616, 408));
         setLocationRelativeTo(null);
