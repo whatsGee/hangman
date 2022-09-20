@@ -17,8 +17,12 @@ public class Game extends javax.swing.JFrame {
      */
     public Game() {
         initComponents();
-        jLabel1.setVisible(false);
-        jLabel5.setVisible(false);
+        head.setVisible(false);
+        rightArm.setVisible(false);
+        rightLeg.setVisible(false);
+        body.setVisible(false);
+        leftLeg.setVisible(false);
+        leftArm.setVisible(false);
         popLose.setVisible(false);
         popWin.setVisible(false);
         popSkip.setVisible(false);
@@ -42,7 +46,6 @@ public class Game extends javax.swing.JFrame {
         z = new javax.swing.JButton();
         x = new javax.swing.JButton();
         c = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         v = new javax.swing.JButton();
         b = new javax.swing.JButton();
@@ -67,7 +70,6 @@ public class Game extends javax.swing.JFrame {
         i = new javax.swing.JButton();
         o = new javax.swing.JButton();
         p = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -93,6 +95,12 @@ public class Game extends javax.swing.JFrame {
         jLabel18 = new javax.swing.JLabel();
         noChoice1 = new javax.swing.JButton();
         yesChoice1 = new javax.swing.JButton();
+        head = new javax.swing.JLabel();
+        body = new javax.swing.JLabel();
+        rightLeg = new javax.swing.JLabel();
+        rightArm = new javax.swing.JLabel();
+        leftArm = new javax.swing.JLabel();
+        leftLeg = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Start Game");
@@ -109,7 +117,7 @@ public class Game extends javax.swing.JFrame {
             }
         });
         getContentPane().add(backScores);
-        backScores.setBounds(10, 340, 72, 23);
+        backScores.setBounds(10, 340, 72, 25);
 
         z.setText("Z");
         z.addActionListener(new java.awt.event.ActionListener() {
@@ -137,11 +145,6 @@ public class Game extends javax.swing.JFrame {
         });
         getContentPane().add(c);
         c.setBounds(230, 320, 50, 50);
-
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel1.setText("O");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(290, 30, 20, 20);
 
         jLabel3.setFont(new java.awt.Font("Helvetica Neue", 0, 120)); // NOI18N
         jLabel3.setText("Γ");
@@ -355,11 +358,6 @@ public class Game extends javax.swing.JFrame {
         getContentPane().add(p);
         p.setBounds(550, 200, 50, 50);
 
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("|");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(280, 40, 30, 30);
-
         jLabel4.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("_");
@@ -420,7 +418,7 @@ public class Game extends javax.swing.JFrame {
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Score");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(520, 10, 80, 17);
+        jLabel2.setBounds(520, 10, 80, 16);
 
         dateAndTime.setText("dateAndTime");
         getContentPane().add(dateAndTime);
@@ -470,7 +468,7 @@ public class Game extends javax.swing.JFrame {
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("Try Again?");
         popLose.add(jLabel14);
-        jLabel14.setBounds(60, 60, 70, 15);
+        jLabel14.setBounds(60, 60, 70, 17);
 
         noChoice.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         noChoice.setText("No");
@@ -511,7 +509,7 @@ public class Game extends javax.swing.JFrame {
         jLabel18.setForeground(new java.awt.Color(255, 255, 255));
         jLabel18.setText("Try Again?");
         popWin.add(jLabel18);
-        jLabel18.setBounds(60, 60, 70, 15);
+        jLabel18.setBounds(60, 60, 70, 17);
 
         noChoice1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         noChoice1.setText("No");
@@ -538,9 +536,37 @@ public class Game extends javax.swing.JFrame {
         getContentPane().add(popWin);
         popWin.setBounds(0, 0, 180, 140);
 
-        setSize(new java.awt.Dimension(616, 408));
-        setLocationRelativeTo(null);
-    }// </editor-fold>//GEN-END:initComponents
+        head.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        head.setText("O");
+        getContentPane().add(head);
+        head.setBounds(300, 40, 20, 20);
+
+        body.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        body.setText("  |");
+        getContentPane().add(body);
+        body.setBounds(290, 50, 40, 40);
+
+        rightLeg.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        rightLeg.setText("\\");
+            getContentPane().add(rightLeg);
+            rightLeg.setBounds(310, 90, 30, 20);
+
+            rightArm.setText("____\\");
+                getContentPane().add(rightArm);
+                rightArm.setBounds(310, 50, 40, 20);
+
+                leftArm.setText("/____");
+                getContentPane().add(leftArm);
+                leftArm.setBounds(280, 50, 40, 20);
+
+                leftLeg.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+                leftLeg.setText("  /");
+                getContentPane().add(leftLeg);
+                leftLeg.setBounds(280, 90, 30, 20);
+
+                setSize(new java.awt.Dimension(616, 408));
+                setLocationRelativeTo(null);
+            }// </editor-fold>//GEN-END:initComponents
 
     private void backScoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backScoresActionPerformed
         dispose();
@@ -822,9 +848,19 @@ public class Game extends javax.swing.JFrame {
         return numbers;
     }
     private void CheckMistakes(){
-    if (mistakes == 6){
+    if (mistakes == 1)
+        head.setVisible(true);
+    else if (mistakes == 2)
+        body.setVisible(true);
+    else if (mistakes == 3)
+        leftArm.setVisible(true);
+    else if(mistakes == 4)
+        rightArm.setVisible(true);
+    else if(mistakes == 5)
+        leftLeg.setVisible(true);
+    else{
+        rightLeg.setVisible(true);
         popLose.setVisible(true);
-        
     }
 }
    public void initial(){
@@ -977,6 +1013,7 @@ public class Game extends javax.swing.JFrame {
     private javax.swing.JButton a;
     private javax.swing.JButton b;
     private javax.swing.JButton backScores;
+    private javax.swing.JLabel body;
     private javax.swing.JButton c;
     private javax.swing.JButton d;
     private javax.swing.JLabel dateAndTime;
@@ -985,10 +1022,10 @@ public class Game extends javax.swing.JFrame {
     private javax.swing.JButton g;
     private javax.swing.JButton gameOverBtn;
     private javax.swing.JButton h;
+    private javax.swing.JLabel head;
     private javax.swing.JButton i;
     private javax.swing.JButton j;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -1001,13 +1038,14 @@ public class Game extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JButton k;
     private javax.swing.JButton l;
+    private javax.swing.JLabel leftArm;
+    private javax.swing.JLabel leftLeg;
     private javax.swing.JButton m;
     private javax.swing.JButton n;
     private javax.swing.JButton noChoice;
@@ -1019,6 +1057,8 @@ public class Game extends javax.swing.JFrame {
     private javax.swing.JLayeredPane popWin;
     private javax.swing.JButton q;
     private javax.swing.JButton r;
+    private javax.swing.JLabel rightArm;
+    private javax.swing.JLabel rightLeg;
     private javax.swing.JButton s;
     private javax.swing.JButton t;
     private javax.swing.JButton u;
