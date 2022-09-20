@@ -625,6 +625,7 @@ public class Game extends javax.swing.JFrame {
 
     private void noChoiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_noChoiceActionPerformed
         dispose();
+        new Menu().setVisible(true);
     }//GEN-LAST:event_noChoiceActionPerformed
 
     /**
