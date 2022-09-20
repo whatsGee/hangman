@@ -59,7 +59,6 @@ public class Loading extends javax.swing.JFrame {
         setBackground(new java.awt.Color(153, 153, 153));
         setForeground(new java.awt.Color(0, 0, 0));
         setMaximumSize(new java.awt.Dimension(600, 400));
-        setPreferredSize(new java.awt.Dimension(600, 400));
         setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Nirmala UI Semilight", 1, 24)); // NOI18N
@@ -110,7 +109,7 @@ public class Loading extends javax.swing.JFrame {
                 .addContainerGap(123, Short.MAX_VALUE))
         );
 
-        setSize(new java.awt.Dimension(614, 407));
+        pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
