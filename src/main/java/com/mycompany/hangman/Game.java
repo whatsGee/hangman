@@ -26,6 +26,7 @@ public class Game extends javax.swing.JFrame {
         popLose.setVisible(false);
         popWin.setVisible(false);
         popSkip.setVisible(false);
+        wrong.setVisible(false);
         initial();
         getPanels();
         curDateTime();
@@ -101,6 +102,7 @@ public class Game extends javax.swing.JFrame {
         rightArm = new javax.swing.JLabel();
         leftArm = new javax.swing.JLabel();
         leftLeg = new javax.swing.JLabel();
+        wrong = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Start Game");
@@ -564,6 +566,12 @@ public class Game extends javax.swing.JFrame {
                 getContentPane().add(leftLeg);
                 leftLeg.setBounds(280, 90, 30, 20);
 
+                wrong.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+                wrong.setForeground(new java.awt.Color(153, 51, 0));
+                wrong.setText("You got it wrong!");
+                getContentPane().add(wrong);
+                wrong.setBounds(370, 80, 100, 20);
+
                 setSize(new java.awt.Dimension(616, 408));
                 setLocationRelativeTo(null);
             }// </editor-fold>//GEN-END:initComponents
@@ -843,6 +851,7 @@ public class Game extends javax.swing.JFrame {
         if (letters == 0){
             mistakes++;
             score = score - 10;
+            wrong.setVisible(true);
         }
         jLabel2.setText("Score : " + String.valueOf(score));
         return numbers;
@@ -908,6 +917,7 @@ public class Game extends javax.swing.JFrame {
             jLabel6.setText(newLetter);
             jLabel6.setVisible(true);
             correct++;
+            wrong.setVisible(false);
             }
         
             if (letters == 2){
@@ -915,24 +925,28 @@ public class Game extends javax.swing.JFrame {
             jLabel8.setText(newLetter);
             jLabel8.setVisible(true);
             correct++;
+            wrong.setVisible(false);
             }
             if (letters == 3){
             jLabel9.setVisible(false);   
             jLabel9.setText(newLetter);
             jLabel9.setVisible(true);
             correct++;
+            wrong.setVisible(false);
             }
             if (letters == 4){
             jLabel10.setVisible(false);   
             jLabel10.setText(newLetter);
             jLabel10.setVisible(true);
             correct++;
+            wrong.setVisible(false);
             }
             if (letters == 5){
             jLabel11.setVisible(false);   
             jLabel11.setText(newLetter);
             jLabel11.setVisible(true);
             correct++;
+            wrong.setVisible(false);
             }
             
         }
@@ -945,6 +959,7 @@ public class Game extends javax.swing.JFrame {
             jLabel7.setText(newLetter);
             jLabel7.setVisible(true);
             correct++;
+            wrong.setVisible(false);
             }
         
             if (letters == 2){
@@ -952,42 +967,49 @@ public class Game extends javax.swing.JFrame {
             jLabel6.setText(newLetter);
             jLabel6.setVisible(true);
             correct++;
+            wrong.setVisible(false);
             }
             if (letters == 3){
             jLabel8.setVisible(false);   
             jLabel8.setText(newLetter);
             jLabel8.setVisible(true);
             correct++;
+            wrong.setVisible(false);
             }
             if (letters == 4){
             jLabel9.setVisible(false);   
             jLabel9.setText(newLetter);
             jLabel9.setVisible(true);
             correct++;
+            wrong.setVisible(false);
             }
             if (letters == 5){
             jLabel10.setVisible(false);   
             jLabel10.setText(newLetter);
             jLabel10.setVisible(true);
             correct++;
+            wrong.setVisible(false);
             }
             if (letters == 6){
             jLabel11.setVisible(false);   
             jLabel11.setText(newLetter);
             jLabel11.setVisible(true);
             correct++;
+            wrong.setVisible(false);
             }
             if (letters == 7){
             jLabel12.setVisible(false);   
             jLabel12.setText(newLetter);
             jLabel12.setVisible(true);
             correct++;
+            wrong.setVisible(false);
             }
             if (letters == 8){
             jLabel4.setVisible(false);   
             jLabel4.setText(newLetter);
             jLabel4.setVisible(true);
             correct++;
+            wrong.setVisible(false);
             }
             }
         }
@@ -1064,6 +1086,7 @@ public class Game extends javax.swing.JFrame {
     private javax.swing.JButton u;
     private javax.swing.JButton v;
     private javax.swing.JButton w;
+    private javax.swing.JLabel wrong;
     private javax.swing.JButton x;
     private javax.swing.JButton y;
     private javax.swing.JButton yesChoice;
