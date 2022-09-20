@@ -53,6 +53,7 @@ public class Loading extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         progress = new javax.swing.JProgressBar();
         jLabel2 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Swing Project v 1.0");
@@ -60,56 +61,47 @@ public class Loading extends javax.swing.JFrame {
         setForeground(new java.awt.Color(0, 0, 0));
         setMaximumSize(new java.awt.Dimension(600, 400));
         setResizable(false);
+        getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Nirmala UI Semilight", 1, 24)); // NOI18N
         jLabel1.setText("CS 2450 S.W.I.N.G Project 1.0");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(143, 51, 317, 44);
 
         jLabel3.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
         jLabel3.setText("Hangman");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(242, 106, 129, 35);
 
         progress.setBackground(new java.awt.Color(255, 255, 255));
         progress.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 24)); // NOI18N
         progress.setForeground(new java.awt.Color(153, 153, 153));
         progress.setStringPainted(true);
+        getContentPane().add(progress);
+        progress.setBounds(143, 205, 317, 44);
 
         jLabel2.setFont(new java.awt.Font("Bahnschrift", 0, 12)); // NOI18N
         jLabel2.setText("By: iDesign");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(272, 267, 59, 15);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(242, 242, 242)
-                .addComponent(jLabel3)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(143, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(progress, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(140, 140, 140))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(269, 269, 269))))
+        jPanel1.setBackground(new java.awt.Color(153, 255, 204));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 600, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(51, 51, 51)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
-                .addGap(64, 64, 64)
-                .addComponent(progress, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel2)
-                .addContainerGap(123, Short.MAX_VALUE))
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
         );
 
-        pack();
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 600, 400);
+
+        setSize(new java.awt.Dimension(616, 408));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -152,6 +144,7 @@ public class Loading extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JProgressBar progress;
     // End of variables declaration//GEN-END:variables
 }

@@ -29,6 +29,7 @@ public class Menu extends javax.swing.JFrame {
         playButton = new javax.swing.JButton();
         scoreButton = new javax.swing.JButton();
         creditButton = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Hangman by iDesign");
@@ -37,6 +38,7 @@ public class Menu extends javax.swing.JFrame {
         setMaximumSize(new java.awt.Dimension(600, 400));
         setPreferredSize(new java.awt.Dimension(600, 400));
         setResizable(false);
+        getContentPane().setLayout(null);
 
         playButton.setBackground(new java.awt.Color(153, 153, 153));
         playButton.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
@@ -48,6 +50,8 @@ public class Menu extends javax.swing.JFrame {
                 playButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(playButton);
+        playButton.setBounds(206, 148, 170, 29);
 
         scoreButton.setBackground(new java.awt.Color(153, 153, 153));
         scoreButton.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
@@ -59,6 +63,8 @@ public class Menu extends javax.swing.JFrame {
                 scoreButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(scoreButton);
+        scoreButton.setBounds(206, 195, 170, 29);
 
         creditButton.setBackground(new java.awt.Color(153, 153, 153));
         creditButton.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
@@ -70,30 +76,25 @@ public class Menu extends javax.swing.JFrame {
                 creditButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(creditButton);
+        creditButton.setBounds(206, 242, 170, 29);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(206, 206, 206)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(creditButton, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(scoreButton, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(playButton, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(223, Short.MAX_VALUE))
+        jPanel1.setBackground(new java.awt.Color(102, 153, 255));
+        jPanel1.setForeground(new java.awt.Color(153, 153, 255));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 600, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(148, Short.MAX_VALUE)
-                .addComponent(playButton)
-                .addGap(18, 18, 18)
-                .addComponent(scoreButton)
-                .addGap(18, 18, 18)
-                .addComponent(creditButton)
-                .addGap(129, 129, 129))
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
         );
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 600, 400);
 
         pack();
         setLocationRelativeTo(null);
@@ -151,6 +152,7 @@ public class Menu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton creditButton;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JButton playButton;
     private javax.swing.JButton scoreButton;
     // End of variables declaration//GEN-END:variables
