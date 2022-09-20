@@ -4,6 +4,8 @@
  */
 package com.mycompany.hangman;
 import java.util.Random;
+import java.time.LocalDateTime;  
+import java.time.format.DateTimeFormatter;
 
 /**
  *
@@ -21,6 +23,8 @@ public class Game extends javax.swing.JFrame {
         popSkip.setVisible(false);
         initial();
         getPanels();
+        curDateAndTime();
+        dateAndTime.setVisible(true);
         
     }
 
@@ -82,6 +86,7 @@ public class Game extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        dateAndTime = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Start Game");
@@ -129,7 +134,7 @@ public class Game extends javax.swing.JFrame {
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("Try Again?");
         popPanel.add(jLabel14);
-        jLabel14.setBounds(60, 60, 70, 17);
+        jLabel14.setBounds(60, 60, 70, 15);
 
         noChoice.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         noChoice.setText("No");
@@ -169,7 +174,7 @@ public class Game extends javax.swing.JFrame {
             }
         });
         getContentPane().add(backScores);
-        backScores.setBounds(10, 340, 72, 25);
+        backScores.setBounds(10, 340, 72, 23);
 
         z.setText("Z");
         z.addActionListener(new java.awt.event.ActionListener() {
@@ -480,7 +485,11 @@ public class Game extends javax.swing.JFrame {
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Score");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(520, 10, 80, 16);
+        jLabel2.setBounds(520, 10, 80, 17);
+
+        dateAndTime.setText("dateAndTime");
+        getContentPane().add(dateAndTime);
+        dateAndTime.setBounds(330, 0, 170, 30);
 
         setSize(new java.awt.Dimension(616, 408));
         setLocationRelativeTo(null);
@@ -717,6 +726,13 @@ public class Game extends javax.swing.JFrame {
         });
     }
     
+    public void curDateAndTime()
+    {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM/dd/yyyy HH:mm:ss");
+        LocalDateTime now = LocalDateTime.now();
+        dateAndTime.setText(dtf.format(now));
+    }
+    
     public String getRandomWord()
     {
         Random random = new Random();
@@ -906,6 +922,7 @@ public class Game extends javax.swing.JFrame {
     private javax.swing.JButton backScores;
     private javax.swing.JButton c;
     private javax.swing.JButton d;
+    private javax.swing.JLabel dateAndTime;
     private javax.swing.JButton e;
     private javax.swing.JButton f;
     private javax.swing.JButton g;
