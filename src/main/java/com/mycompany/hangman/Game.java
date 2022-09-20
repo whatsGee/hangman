@@ -18,6 +18,7 @@ public class Game extends javax.swing.JFrame {
         jLabel1.setVisible(false);
         jLabel5.setVisible(false);
         popPanel.setVisible(false);
+        popSkip.setVisible(false);
         initial();
         getPanels();
         
@@ -32,6 +33,10 @@ public class Game extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        popSkip = new javax.swing.JLayeredPane();
+        jLabel15 = new javax.swing.JLabel();
+        gameOverBtn = new javax.swing.JButton();
+        jLabel16 = new javax.swing.JLabel();
         popPanel = new javax.swing.JLayeredPane();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
@@ -83,6 +88,33 @@ public class Game extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(null);
 
+        popSkip.setBackground(new java.awt.Color(153, 153, 153));
+        popSkip.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        popSkip.setOpaque(true);
+
+        jLabel15.setFont(new java.awt.Font("Sitka Text", 1, 24)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setText("Game Over!");
+        popSkip.add(jLabel15);
+        jLabel15.setBounds(20, 20, 150, 50);
+
+        gameOverBtn.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        gameOverBtn.setText("End");
+        gameOverBtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        gameOverBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gameOverBtnActionPerformed(evt);
+            }
+        });
+        popSkip.add(gameOverBtn);
+        gameOverBtn.setBounds(60, 90, 60, 21);
+
+        jLabel16.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel16.setText("Score: 0");
+        popSkip.add(jLabel16);
+        jLabel16.setBounds(60, 60, 60, 16);
+
         popPanel.setBackground(new java.awt.Color(153, 153, 153));
         popPanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         popPanel.setOpaque(true);
@@ -121,8 +153,11 @@ public class Game extends javax.swing.JFrame {
         popPanel.add(yesChoice);
         yesChoice.setBounds(20, 90, 60, 21);
 
-        getContentPane().add(popPanel);
-        popPanel.setBounds(20, 30, 190, 130);
+        popSkip.add(popPanel);
+        popPanel.setBounds(0, 0, 190, 130);
+
+        getContentPane().add(popSkip);
+        popSkip.setBounds(30, 20, 180, 130);
 
         backScores.setBackground(new java.awt.Color(153, 153, 153));
         backScores.setFont(new java.awt.Font("Maiandra GD", 1, 14)); // NOI18N
@@ -614,7 +649,7 @@ public class Game extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
     score = 0;
-    dispose();
+    popSkip.setVisible(true);
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -627,6 +662,11 @@ public class Game extends javax.swing.JFrame {
         dispose();
         new Menu().setVisible(true);
     }//GEN-LAST:event_noChoiceActionPerformed
+
+    private void gameOverBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gameOverBtnActionPerformed
+        dispose();
+        new Menu().setVisible(true);
+    }//GEN-LAST:event_gameOverBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -869,6 +909,7 @@ public class Game extends javax.swing.JFrame {
     private javax.swing.JButton e;
     private javax.swing.JButton f;
     private javax.swing.JButton g;
+    private javax.swing.JButton gameOverBtn;
     private javax.swing.JButton h;
     private javax.swing.JButton i;
     private javax.swing.JButton j;
@@ -879,6 +920,8 @@ public class Game extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -895,6 +938,7 @@ public class Game extends javax.swing.JFrame {
     private javax.swing.JButton o;
     private javax.swing.JButton p;
     private javax.swing.JLayeredPane popPanel;
+    private javax.swing.JLayeredPane popSkip;
     private javax.swing.JButton q;
     private javax.swing.JButton r;
     private javax.swing.JButton s;
