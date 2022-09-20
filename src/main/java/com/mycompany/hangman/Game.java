@@ -454,7 +454,7 @@ public class Game extends javax.swing.JFrame {
         jLabel16.setBounds(60, 60, 60, 16);
 
         getContentPane().add(popSkip);
-        popSkip.setBounds(0, 0, 250, 140);
+        popSkip.setBounds(0, 0, 180, 140);
 
         popLose.setBackground(new java.awt.Color(153, 153, 153));
         popLose.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -495,7 +495,7 @@ public class Game extends javax.swing.JFrame {
         yesChoice.setBounds(20, 90, 60, 21);
 
         getContentPane().add(popLose);
-        popLose.setBounds(0, 0, 250, 140);
+        popLose.setBounds(0, 0, 180, 140);
 
         popWin.setBackground(new java.awt.Color(153, 153, 153));
         popWin.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -536,7 +536,7 @@ public class Game extends javax.swing.JFrame {
         yesChoice1.setBounds(20, 90, 60, 21);
 
         getContentPane().add(popWin);
-        popWin.setBounds(0, 0, 250, 140);
+        popWin.setBounds(0, 0, 180, 140);
 
         setSize(new java.awt.Dimension(616, 408));
         setLocationRelativeTo(null);
