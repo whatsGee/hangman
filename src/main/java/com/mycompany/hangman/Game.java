@@ -2,18 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.hangman.sourcecodes;
+package com.mycompany.hangman;
 import java.util.Random;
 
 /**
  *
  * @author Gian
  */
-public class code1 extends javax.swing.JFrame {
+public class Game extends javax.swing.JFrame {
     /**
      * Creates new form startGame
      */
-    public code1() {
+    public Game() {
         initComponents();
         jLabel1.setVisible(false);
         jLabel5.setVisible(false);
@@ -87,7 +87,7 @@ public class code1 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(backScores);
-        backScores.setBounds(10, 340, 72, 23);
+        backScores.setBounds(10, 340, 72, 25);
 
         z.setText("Z");
         z.addActionListener(new java.awt.event.ActionListener() {
@@ -398,7 +398,7 @@ public class code1 extends javax.swing.JFrame {
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Score");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(520, 10, 80, 17);
+        jLabel2.setBounds(520, 10, 80, 16);
 
         setSize(new java.awt.Dimension(616, 408));
         setLocationRelativeTo(null);
@@ -598,21 +598,23 @@ public class code1 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(code1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Game.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(code1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Game.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(code1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Game.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(code1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Game.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new code1().setVisible(true);
+                new Game().setVisible(true);
                 
             }
         });
