@@ -773,7 +773,7 @@ public class Game extends javax.swing.JFrame {
      */
     private char letter;
     private String word = "";
-    private final static String wordBank[] = {"abstract", "cemetary", "nurse", "pharmacy", "climbing"};
+    private final static String wordBank[] = {"nurse", "climbing", "cemetary", "pharmacy", "abstract"};
     private static int letters = 0;
     private int [] numbers;
     private int mistakes = 0;
