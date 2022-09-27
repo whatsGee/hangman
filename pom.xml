@@ -11,4 +11,5 @@
         <maven.compiler.target>16</maven.compiler.target>
         <exec.mainClass>com.mycompany.hangman.Hangman</exec.mainClass>
     </properties>
+    <name>SwingProject</name>
 </project>
