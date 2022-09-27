@@ -119,7 +119,7 @@ public class Game extends javax.swing.JFrame {
             }
         });
         getContentPane().add(backScores);
-        backScores.setBounds(10, 340, 72, 25);
+        backScores.setBounds(10, 340, 72, 26);
 
         z.setText("Z");
         z.addActionListener(new java.awt.event.ActionListener() {
@@ -437,7 +437,7 @@ public class Game extends javax.swing.JFrame {
         jLabel15.setBounds(20, 20, 160, 50);
 
         gameOverBtn.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        gameOverBtn.setText("End");
+        gameOverBtn.setText("Continue");
         gameOverBtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         gameOverBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -445,7 +445,7 @@ public class Game extends javax.swing.JFrame {
             }
         });
         popSkip.add(gameOverBtn);
-        gameOverBtn.setBounds(60, 90, 60, 21);
+        gameOverBtn.setBounds(60, 90, 62, 21);
 
         jLabel16.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
@@ -458,6 +458,7 @@ public class Game extends javax.swing.JFrame {
 
         popLose.setBackground(new java.awt.Color(153, 153, 153));
         popLose.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        popLose.setMaximumSize(new java.awt.Dimension(180, 140));
         popLose.setOpaque(true);
 
         jLabel13.setFont(new java.awt.Font("Sitka Text", 1, 24)); // NOI18N
@@ -750,17 +751,17 @@ public class Game extends javax.swing.JFrame {
 
     private void noChoiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_noChoiceActionPerformed
         dispose();
-        new Menu().setVisible(true);
+        new ColorGame().setVisible(true);
     }//GEN-LAST:event_noChoiceActionPerformed
 
     private void gameOverBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gameOverBtnActionPerformed
         dispose();
-        new Menu().setVisible(true);
+        new ColorGame().setVisible(true);
     }//GEN-LAST:event_gameOverBtnActionPerformed
 
     private void noChoice1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_noChoice1ActionPerformed
         dispose();
-        new Menu().setVisible(true);// TODO add your handling code here:
+        new ColorGame().setVisible(true);// TODO add your handling code here:
     }//GEN-LAST:event_noChoice1ActionPerformed
 
     private void yesChoice1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yesChoice1ActionPerformed
