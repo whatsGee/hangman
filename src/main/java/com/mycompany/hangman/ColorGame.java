@@ -283,8 +283,8 @@ public class ColorGame extends javax.swing.JFrame {
 
     private void purpleBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_purpleBtnActionPerformed
         randCol.setText(randColor.getRandomColor(randColor.colorString()));
-        setScore();
         Number = 5;
+        setScore();
         setRandom();
         setForeground();
                 
