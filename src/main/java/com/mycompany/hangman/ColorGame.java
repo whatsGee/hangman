@@ -170,19 +170,19 @@ public class ColorGame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void blueBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blueBtnActionPerformed
+        Number = 1;
         randCol.setText(randColor.getRandomColor(randColor.colorString()));
+        setScore();
         setRandom();
         setForeground();
         
         Random r = new Random();
-        Number = 1;
         blueBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
         greenBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
         yellowBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
         purpleBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
         redBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
         Counter++;
-        setScore();
         jLabel2.setText("Score : " + String.valueOf(Score));
 // TODO add your handling code here:
     }//GEN-LAST:event_blueBtnActionPerformed
@@ -196,19 +196,19 @@ public class ColorGame extends javax.swing.JFrame {
     }//GEN-LAST:event_blueBtnMouseExited
 
     private void greenBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_greenBtnActionPerformed
+        Number = 2;
         randCol.setText(randColor.getRandomColor(randColor.colorString()));
+        setScore();
         setRandom();
         setForeground();
         
         Random r = new Random();
-        Number = 2;
         blueBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
         greenBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
         yellowBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
         purpleBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
         redBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
         Counter++;
-        setScore();
         jLabel2.setText("Score : " + String.valueOf(Score));
 // TODO add your handling code here:
     }//GEN-LAST:event_greenBtnActionPerformed
@@ -247,47 +247,47 @@ public class ColorGame extends javax.swing.JFrame {
 
     private void redBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_redBtnActionPerformed
        randCol.setText(randColor.getRandomColor(randColor.colorString()));
+       Number = 3;
+       setScore();
        setRandom();
        setForeground();
         
        Random r = new Random();
-       Number = 3;
        blueBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
        greenBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
        yellowBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
        purpleBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
        redBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
        Counter++;
-       setScore();
        jLabel2.setText("Score : " + String.valueOf(Score));
        // TODO add your handling code here:
     }//GEN-LAST:event_redBtnActionPerformed
 
     private void yellowBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yellowBtnActionPerformed
         randCol.setText(randColor.getRandomColor(randColor.colorString()));
+        Number = 4;
+        setScore();
         setRandom();
         setForeground();
         
         Random r = new Random();
-        Number = 4;
         blueBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
         greenBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
         yellowBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
         purpleBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
         redBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
         Counter++;
-        setScore();
         jLabel2.setText("Score : " + String.valueOf(Score));
 // TODO add your handling code here:
     }//GEN-LAST:event_yellowBtnActionPerformed
 
     private void purpleBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_purpleBtnActionPerformed
         randCol.setText(randColor.getRandomColor(randColor.colorString()));
+        Number = 5;
         setRandom();
         setForeground();
                 
         Random r = new Random();
-        Number = 5;
         blueBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
         greenBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
         yellowBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
@@ -385,7 +385,7 @@ public class ColorGame extends javax.swing.JFrame {
     }
     public void setRandom(){
         Random m = new Random();
-        Random = m.nextInt(5 - 1) +1;
+        Random = m.nextInt(6 - 1) +1;
     }
     public void setScore(){
         if(Random == Number){
