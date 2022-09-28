@@ -51,7 +51,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(playButton);
-        playButton.setBounds(206, 148, 170, 30);
+        playButton.setBounds(206, 148, 170, 29);
 
         scoreButton.setBackground(new java.awt.Color(153, 153, 153));
         scoreButton.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
@@ -64,7 +64,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(scoreButton);
-        scoreButton.setBounds(206, 195, 170, 30);
+        scoreButton.setBounds(206, 195, 170, 29);
 
         creditButton.setBackground(new java.awt.Color(153, 153, 153));
         creditButton.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
@@ -77,7 +77,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(creditButton);
-        creditButton.setBounds(206, 242, 170, 30);
+        creditButton.setBounds(206, 242, 170, 29);
 
         jPanel1.setBackground(new java.awt.Color(102, 153, 255));
         jPanel1.setForeground(new java.awt.Color(153, 153, 255));

@@ -3,6 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.mycompany.hangman;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import java.util.Random;
 
 /**
  *
@@ -26,25 +30,174 @@ public class ColorGame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        blueBtn = new javax.swing.JButton();
+        redBtn = new javax.swing.JButton();
+        purpleBtn = new javax.swing.JButton();
+        greenBtn = new javax.swing.JButton();
+        yellowBtn = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Color Game");
+        setBackground(new java.awt.Color(0, 0, 0));
+        setForeground(new java.awt.Color(0, 0, 0));
         setMaximumSize(new java.awt.Dimension(600, 400));
+        setPreferredSize(new java.awt.Dimension(600, 400));
         setResizable(false);
+        getContentPane().setLayout(null);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setMaximumSize(new java.awt.Dimension(600, 400));
+        jPanel1.setName(""); // NOI18N
+        jPanel1.setPreferredSize(new java.awt.Dimension(600, 400));
+        jPanel1.setLayout(null);
 
-        setSize(new java.awt.Dimension(614, 407));
+        blueBtn.setBackground(new java.awt.Color(51, 51, 255));
+        blueBtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        blueBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        blueBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                blueBtnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                blueBtnMouseExited(evt);
+            }
+        });
+        blueBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                blueBtnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(blueBtn);
+        blueBtn.setBounds(260, 170, 100, 100);
+
+        redBtn.setBackground(new java.awt.Color(255, 102, 102));
+        redBtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        redBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                redBtnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                redBtnMouseExited(evt);
+            }
+        });
+        jPanel1.add(redBtn);
+        redBtn.setBounds(50, 90, 100, 100);
+
+        purpleBtn.setBackground(new java.awt.Color(204, 51, 255));
+        purpleBtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        purpleBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                purpleBtnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                purpleBtnMouseExited(evt);
+            }
+        });
+        jPanel1.add(purpleBtn);
+        purpleBtn.setBounds(430, 260, 100, 100);
+
+        greenBtn.setBackground(new java.awt.Color(153, 255, 153));
+        greenBtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        greenBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                greenBtnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                greenBtnMouseExited(evt);
+            }
+        });
+        greenBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                greenBtnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(greenBtn);
+        greenBtn.setBounds(100, 240, 100, 100);
+
+        yellowBtn.setBackground(new java.awt.Color(255, 255, 153));
+        yellowBtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        yellowBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                yellowBtnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                yellowBtnMouseExited(evt);
+            }
+        });
+        jPanel1.add(yellowBtn);
+        yellowBtn.setBounds(430, 100, 100, 100);
+
+        jLabel1.setFont(new java.awt.Font("Ravie", 0, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Color");
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(220, 60, 130, 50);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 600, 400);
+
+        setSize(new java.awt.Dimension(616, 408));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void blueBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blueBtnActionPerformed
+        Random r = new Random();
+        blueBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
+        greenBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
+        yellowBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
+        purpleBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
+        redBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
+        
+// TODO add your handling code here:
+    }//GEN-LAST:event_blueBtnActionPerformed
+
+    private void blueBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_blueBtnMouseEntered
+      blueBtn.setBackground(Color.blue); // TODO add your handling code here:
+    }//GEN-LAST:event_blueBtnMouseEntered
+
+    private void blueBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_blueBtnMouseExited
+      blueBtn.setBackground(new Color(51, 102, 255)); // TODO add your handling code here:
+    }//GEN-LAST:event_blueBtnMouseExited
+
+    private void greenBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_greenBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_greenBtnActionPerformed
+
+    private void redBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_redBtnMouseEntered
+       redBtn.setBackground(Color.red); // TODO add your handling code here:
+    }//GEN-LAST:event_redBtnMouseEntered
+
+    private void redBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_redBtnMouseExited
+       redBtn.setBackground(new Color(255,102,102)); // TODO add your handling code here:
+    }//GEN-LAST:event_redBtnMouseExited
+
+    private void greenBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_greenBtnMouseEntered
+       greenBtn.setBackground(Color.green); // TODO add your handling code here:
+    }//GEN-LAST:event_greenBtnMouseEntered
+
+    private void greenBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_greenBtnMouseExited
+       greenBtn.setBackground(new Color(153,255,153)); // TODO add your handling code here:
+    }//GEN-LAST:event_greenBtnMouseExited
+
+    private void yellowBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_yellowBtnMouseEntered
+       yellowBtn.setBackground(Color.yellow); // TODO add your handling code here:
+    }//GEN-LAST:event_yellowBtnMouseEntered
+
+    private void yellowBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_yellowBtnMouseExited
+       yellowBtn.setBackground(new Color(255,255,153)); // TODO add your handling code here:
+    }//GEN-LAST:event_yellowBtnMouseExited
+
+    private void purpleBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_purpleBtnMouseEntered
+       purpleBtn.setBackground(new Color(153,0,255)); // TODO add your handling code here:
+    }//GEN-LAST:event_purpleBtnMouseEntered
+
+    private void purpleBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_purpleBtnMouseExited
+       purpleBtn.setBackground(new Color(204,51,255)); // TODO add your handling code here:
+    }//GEN-LAST:event_purpleBtnMouseExited
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -81,5 +234,12 @@ public class ColorGame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton blueBtn;
+    private javax.swing.JButton greenBtn;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton purpleBtn;
+    private javax.swing.JButton redBtn;
+    private javax.swing.JButton yellowBtn;
     // End of variables declaration//GEN-END:variables
 }
