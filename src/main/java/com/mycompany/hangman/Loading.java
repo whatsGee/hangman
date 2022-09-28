@@ -66,12 +66,12 @@ public class Loading extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Nirmala UI Semilight", 1, 24)); // NOI18N
         jLabel1.setText("CS 2450 S.W.I.N.G Project 1.0");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(143, 51, 317, 44);
+        jLabel1.setBounds(143, 51, 355, 44);
 
         jLabel3.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
         jLabel3.setText("Hangman");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(242, 106, 129, 35);
+        jLabel3.setBounds(242, 106, 124, 35);
 
         progress.setBackground(new java.awt.Color(255, 255, 255));
         progress.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 24)); // NOI18N
@@ -83,7 +83,7 @@ public class Loading extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Bahnschrift", 0, 12)); // NOI18N
         jLabel2.setText("By: iDesign");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(272, 267, 59, 15);
+        jLabel2.setBounds(272, 267, 63, 15);
 
         jPanel1.setBackground(new java.awt.Color(153, 255, 204));
 
