@@ -24,6 +24,7 @@ public class ColorGame extends javax.swing.JFrame {
         jLabel2.setText("Score : " + String.valueOf(Score));
         setRandom();
         setForeground();
+        endPage.setVisible(false);
     }
 
     /**
@@ -35,6 +36,10 @@ public class ColorGame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        endPage = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         blueBtn = new javax.swing.JButton();
         redBtn = new javax.swing.JButton();
@@ -52,6 +57,29 @@ public class ColorGame extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(600, 400));
         setResizable(false);
         getContentPane().setLayout(null);
+
+        endPage.setLayout(null);
+
+        jButton1.setText("END");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        endPage.add(jButton1);
+        jButton1.setBounds(100, 120, 100, 40);
+
+        jLabel1.setText("Score");
+        endPage.add(jLabel1);
+        jLabel1.setBounds(130, 90, 30, 20);
+
+        jLabel3.setFont(new java.awt.Font("Showcard Gothic", 1, 24)); // NOI18N
+        jLabel3.setText("Game Over!");
+        endPage.add(jLabel3);
+        jLabel3.setBounds(80, 60, 150, 30);
+
+        getContentPane().add(endPage);
+        endPage.setBounds(140, 80, 300, 230);
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setMaximumSize(new java.awt.Dimension(600, 400));
@@ -156,11 +184,12 @@ public class ColorGame extends javax.swing.JFrame {
         jPanel1.add(randCol);
         randCol.setBounds(200, 30, 210, 50);
 
+        jLabel2.setFont(new java.awt.Font("Perpetua Titling MT", 1, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Score");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(502, 20, 70, 17);
+        jLabel2.setBounds(490, 20, 80, 20);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 600, 400);
@@ -183,6 +212,7 @@ public class ColorGame extends javax.swing.JFrame {
         purpleBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
         redBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
         Counter++;
+        endGame();
         jLabel2.setText("Score : " + String.valueOf(Score));
 // TODO add your handling code here:
     }//GEN-LAST:event_blueBtnActionPerformed
@@ -209,6 +239,7 @@ public class ColorGame extends javax.swing.JFrame {
         purpleBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
         redBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
         Counter++;
+        endGame();
         jLabel2.setText("Score : " + String.valueOf(Score));
 // TODO add your handling code here:
     }//GEN-LAST:event_greenBtnActionPerformed
@@ -259,6 +290,7 @@ public class ColorGame extends javax.swing.JFrame {
        purpleBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
        redBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
        Counter++;
+       endGame();
        jLabel2.setText("Score : " + String.valueOf(Score));
        // TODO add your handling code here:
     }//GEN-LAST:event_redBtnActionPerformed
@@ -277,6 +309,7 @@ public class ColorGame extends javax.swing.JFrame {
         purpleBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
         redBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
         Counter++;
+        endGame();
         jLabel2.setText("Score : " + String.valueOf(Score));
 // TODO add your handling code here:
     }//GEN-LAST:event_yellowBtnActionPerformed
@@ -295,9 +328,15 @@ public class ColorGame extends javax.swing.JFrame {
         purpleBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
         redBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
         Counter++;
+        endGame();
         jLabel2.setText("Score : " + String.valueOf(Score));
 // TODO add your handling code here:
     }//GEN-LAST:event_purpleBtnActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        dispose();
+        new Menu().setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
     
     colorGenerator randColor = new colorGenerator();
     
@@ -392,11 +431,27 @@ public class ColorGame extends javax.swing.JFrame {
             Score = Score +100;
         }
     }
+    
+    public void endGame(){
+        if(Counter == 5){
+            blueBtn.setVisible(false);
+            yellowBtn.setVisible(false);
+            purpleBtn.setVisible(false);
+            greenBtn.setVisible(false);
+            redBtn.setVisible(false);
+            randCol.setVisible(false);
+            endPage.setVisible(true);
+        }
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton blueBtn;
+    private javax.swing.JPanel endPage;
     private javax.swing.JButton greenBtn;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton purpleBtn;
     private javax.swing.JLabel randCol;
