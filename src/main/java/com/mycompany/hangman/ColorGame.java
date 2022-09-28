@@ -283,6 +283,7 @@ public class ColorGame extends javax.swing.JFrame {
 
     private void purpleBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_purpleBtnActionPerformed
         randCol.setText(randColor.getRandomColor(randColor.colorString()));
+        setScore();
         Number = 5;
         setRandom();
         setForeground();
@@ -294,7 +295,6 @@ public class ColorGame extends javax.swing.JFrame {
         purpleBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
         redBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
         Counter++;
-        setScore();
         jLabel2.setText("Score : " + String.valueOf(Score));
 // TODO add your handling code here:
     }//GEN-LAST:event_purpleBtnActionPerformed
