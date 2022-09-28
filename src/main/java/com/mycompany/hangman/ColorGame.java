@@ -82,6 +82,11 @@ public class ColorGame extends javax.swing.JFrame {
                 redBtnMouseExited(evt);
             }
         });
+        redBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                redBtnActionPerformed(evt);
+            }
+        });
         jPanel1.add(redBtn);
         redBtn.setBounds(50, 90, 100, 100);
 
@@ -93,6 +98,11 @@ public class ColorGame extends javax.swing.JFrame {
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 purpleBtnMouseExited(evt);
+            }
+        });
+        purpleBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                purpleBtnActionPerformed(evt);
             }
         });
         jPanel1.add(purpleBtn);
@@ -126,6 +136,11 @@ public class ColorGame extends javax.swing.JFrame {
                 yellowBtnMouseExited(evt);
             }
         });
+        yellowBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                yellowBtnActionPerformed(evt);
+            }
+        });
         jPanel1.add(yellowBtn);
         yellowBtn.setBounds(430, 100, 100, 100);
 
@@ -149,7 +164,6 @@ public class ColorGame extends javax.swing.JFrame {
         yellowBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
         purpleBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
         redBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
-        
 // TODO add your handling code here:
     }//GEN-LAST:event_blueBtnActionPerformed
 
@@ -162,7 +176,13 @@ public class ColorGame extends javax.swing.JFrame {
     }//GEN-LAST:event_blueBtnMouseExited
 
     private void greenBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_greenBtnActionPerformed
-        // TODO add your handling code here:
+        Random r = new Random();
+        blueBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
+        greenBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
+        yellowBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
+        purpleBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
+        redBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
+// TODO add your handling code here:
     }//GEN-LAST:event_greenBtnActionPerformed
 
     private void redBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_redBtnMouseEntered
@@ -196,6 +216,35 @@ public class ColorGame extends javax.swing.JFrame {
     private void purpleBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_purpleBtnMouseExited
        purpleBtn.setBackground(new Color(204,51,255)); // TODO add your handling code here:
     }//GEN-LAST:event_purpleBtnMouseExited
+
+    private void redBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_redBtnActionPerformed
+       Random r = new Random();
+       blueBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
+       greenBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
+       yellowBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
+       purpleBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
+       redBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150); // TODO add your handling code here:
+    }//GEN-LAST:event_redBtnActionPerformed
+
+    private void yellowBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yellowBtnActionPerformed
+        Random r = new Random();
+        blueBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
+        greenBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
+        yellowBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
+        purpleBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
+        redBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
+// TODO add your handling code here:
+    }//GEN-LAST:event_yellowBtnActionPerformed
+
+    private void purpleBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_purpleBtnActionPerformed
+        Random r = new Random();
+        blueBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
+        greenBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
+        yellowBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
+        purpleBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
+        redBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
+// TODO add your handling code here:
+    }//GEN-LAST:event_purpleBtnActionPerformed
     
     
     /**
