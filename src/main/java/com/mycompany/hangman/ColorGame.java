@@ -7,6 +7,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import java.util.Random;
+import java.util.ArrayList;
 
 /**
  *
@@ -19,6 +20,7 @@ public class ColorGame extends javax.swing.JFrame {
      */
     public ColorGame() {
         initComponents();
+        randCol.setText(randColor.getRandomColor(randColor.colorString()));
     }
 
     /**
@@ -36,7 +38,7 @@ public class ColorGame extends javax.swing.JFrame {
         purpleBtn = new javax.swing.JButton();
         greenBtn = new javax.swing.JButton();
         yellowBtn = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        randCol = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -145,16 +147,17 @@ public class ColorGame extends javax.swing.JFrame {
         jPanel1.add(yellowBtn);
         yellowBtn.setBounds(430, 100, 100, 100);
 
-        jLabel1.setFont(new java.awt.Font("Ravie", 0, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Color");
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(220, 60, 130, 50);
+        randCol.setFont(new java.awt.Font("Ravie", 0, 36)); // NOI18N
+        randCol.setForeground(new java.awt.Color(255, 255, 255));
+        randCol.setText("Color");
+        jPanel1.add(randCol);
+        randCol.setBounds(200, 30, 210, 50);
 
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Score");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(502, 20, 70, 17);
+        jLabel2.setBounds(502, 20, 70, 16);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 600, 400);
@@ -164,6 +167,8 @@ public class ColorGame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void blueBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blueBtnActionPerformed
+        randCol.setText(randColor.getRandomColor(randColor.colorString()));
+        
         Random r = new Random();
         Number = 1;
         blueBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
@@ -186,6 +191,8 @@ public class ColorGame extends javax.swing.JFrame {
     }//GEN-LAST:event_blueBtnMouseExited
 
     private void greenBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_greenBtnActionPerformed
+        randCol.setText(randColor.getRandomColor(randColor.colorString()));
+        
         Random r = new Random();
         Number = 2;
         blueBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
@@ -232,6 +239,8 @@ public class ColorGame extends javax.swing.JFrame {
     }//GEN-LAST:event_purpleBtnMouseExited
 
     private void redBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_redBtnActionPerformed
+       randCol.setText(randColor.getRandomColor(randColor.colorString()));
+        
        Random r = new Random();
        Number = 3;
        blueBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
@@ -246,6 +255,8 @@ public class ColorGame extends javax.swing.JFrame {
     }//GEN-LAST:event_redBtnActionPerformed
 
     private void yellowBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yellowBtnActionPerformed
+        randCol.setText(randColor.getRandomColor(randColor.colorString()));
+        
         Random r = new Random();
         Number = 4;
         blueBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
@@ -260,6 +271,8 @@ public class ColorGame extends javax.swing.JFrame {
     }//GEN-LAST:event_yellowBtnActionPerformed
 
     private void purpleBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_purpleBtnActionPerformed
+        randCol.setText(randColor.getRandomColor(randColor.colorString()));
+        
         Random r = new Random();
         Number = 5;
         blueBtn.setLocation(r.nextInt(500), r.nextInt(250-150)+150);
@@ -273,7 +286,31 @@ public class ColorGame extends javax.swing.JFrame {
 // TODO add your handling code here:
     }//GEN-LAST:event_purpleBtnActionPerformed
     
+    colorGenerator randColor = new colorGenerator();
     
+    public class colorGenerator{
+        private ArrayList<String> col = new ArrayList();
+        
+        public colorGenerator(){
+            colorRandomizer();
+        }
+        
+        public ArrayList<String> colorString(){
+            return col;
+        }
+        
+        public String getRandomColor(ArrayList<String> list) {
+            return list.get(new Random().nextInt(list.size()));
+        }
+        
+        private void colorRandomizer(){
+            col.add("BLUE");
+            col.add("RED");
+            col.add("YELLOW");
+            col.add("PURPLE");
+            col.add("GREEN");
+        }
+    }
     /**
      * @param args the command line arguments
      */
@@ -329,10 +366,10 @@ public class ColorGame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton blueBtn;
     private javax.swing.JButton greenBtn;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton purpleBtn;
+    private javax.swing.JLabel randCol;
     private javax.swing.JButton redBtn;
     private javax.swing.JButton yellowBtn;
     // End of variables declaration//GEN-END:variables
