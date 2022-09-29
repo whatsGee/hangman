@@ -31,26 +31,43 @@ public class Scores extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        Score5 = new javax.swing.JLabel();
         backScores2 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        Score1 = new javax.swing.JLabel();
+        Score2 = new javax.swing.JLabel();
+        Score3 = new javax.swing.JLabel();
+        Score4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Scoreboard");
         setMaximumSize(new java.awt.Dimension(600, 400));
         setPreferredSize(new java.awt.Dimension(600, 400));
         setResizable(false);
+        getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Sitka Small", 1, 48)); // NOI18N
         jLabel1.setText("Scoreboard");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(154, 65, 279, 58);
 
         jLabel3.setFont(new java.awt.Font("Candara Light", 1, 24)); // NOI18N
-        jLabel3.setText("Name                                 Score");
+        jLabel3.setText("Name                       Score");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(144, 129, 320, 35);
 
         jLabel2.setFont(new java.awt.Font("Candara Light", 0, 24)); // NOI18N
-        jLabel2.setText("Amelie............................100 pts");
+        jLabel2.setText("___");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(140, 170, 40, 30);
 
-        jLabel4.setFont(new java.awt.Font("Candara Light", 0, 24)); // NOI18N
-        jLabel4.setText("Gee..................................40 pts");
+        Score5.setFont(new java.awt.Font("Candara Light", 0, 24)); // NOI18N
+        Score5.setText("___");
+        getContentPane().add(Score5);
+        Score5.setBounds(420, 320, 40, 30);
 
         backScores2.setBackground(new java.awt.Color(153, 153, 153));
         backScores2.setFont(new java.awt.Font("Maiandra GD", 1, 14)); // NOI18N
@@ -61,41 +78,48 @@ public class Scores extends javax.swing.JFrame {
                 backScores2ActionPerformed(evt);
             }
         });
+        getContentPane().add(backScores2);
+        backScores2.setBounds(6, 365, 72, 23);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(144, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jLabel1))
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(134, 134, 134))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(backScores2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(65, 65, 65)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 129, Short.MAX_VALUE)
-                .addComponent(backScores2)
-                .addContainerGap())
-        );
+        jLabel5.setFont(new java.awt.Font("Candara Light", 0, 24)); // NOI18N
+        jLabel5.setText("___");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(140, 200, 36, 30);
+
+        jLabel6.setFont(new java.awt.Font("Candara Light", 0, 24)); // NOI18N
+        jLabel6.setText("___");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(140, 240, 40, 30);
+
+        jLabel7.setFont(new java.awt.Font("Candara Light", 0, 24)); // NOI18N
+        jLabel7.setText("___");
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(140, 280, 40, 30);
+
+        jLabel8.setFont(new java.awt.Font("Candara Light", 0, 24)); // NOI18N
+        jLabel8.setText("___");
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(140, 320, 40, 30);
+
+        Score1.setFont(new java.awt.Font("Candara Light", 0, 24)); // NOI18N
+        Score1.setText("___");
+        getContentPane().add(Score1);
+        Score1.setBounds(420, 170, 40, 30);
+
+        Score2.setFont(new java.awt.Font("Candara Light", 0, 24)); // NOI18N
+        Score2.setText("___");
+        getContentPane().add(Score2);
+        Score2.setBounds(420, 200, 40, 30);
+
+        Score3.setFont(new java.awt.Font("Candara Light", 0, 24)); // NOI18N
+        Score3.setText("___");
+        getContentPane().add(Score3);
+        Score3.setBounds(420, 240, 40, 30);
+
+        Score4.setFont(new java.awt.Font("Candara Light", 0, 24)); // NOI18N
+        Score4.setText("___");
+        getContentPane().add(Score4);
+        Score4.setBounds(420, 280, 40, 30);
 
         pack();
         setLocationRelativeTo(null);
@@ -140,12 +164,53 @@ public class Scores extends javax.swing.JFrame {
             }
         });
     }
-
+    private int highScore1 = 0;
+    private int highScore2 = 0;
+    private int highScore3 = 0;
+    private int highScore4 = 0;
+    private int highScore5 = 0;
+    private String Name1;
+    private String Name2;
+    private String Name3;
+    private String Name4;
+    private String Name5;
+    int [] Scores = new int [5];
+    public int[] getAllscores(){
+        Scores[0] = highScore1;
+        Scores[1] = highScore1;
+        Scores[2] = highScore1;
+        Scores[3] = highScore1;
+        Scores[4] = highScore1;
+        return Scores;
+    }
+    public void printScore1(){
+    Score1.setText(String.valueOf(highScore1));
+    }
+    public void printScore2(){
+    Score1.setText(String.valueOf(highScore2));
+    }
+    public void printScore3(){
+    Score1.setText(String.valueOf(highScore3));
+    }
+    public void printScore4(){
+    Score1.setText(String.valueOf(highScore4));
+    }
+    public void printScore5(){
+    Score1.setText(String.valueOf(highScore5));
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Score1;
+    private javax.swing.JLabel Score2;
+    private javax.swing.JLabel Score3;
+    private javax.swing.JLabel Score4;
+    private javax.swing.JLabel Score5;
     private javax.swing.JButton backScores2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     // End of variables declaration//GEN-END:variables
 }
