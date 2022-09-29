@@ -190,15 +190,14 @@ public class Scores extends javax.swing.JFrame {
         return Scores;
     }
     public void InOut(){
-        for(int i = 0; i<Scores.length+1; i++){
+        for(int i = 0; i<Scores.length; i++){
                 if(Scores[i] < newScore){
                     compare();
                 }
-                else{
-                    dispose();
-                    new ColorGame(newScore,false).setVisible(true);
-                }    
+                   
         }
+        dispose();
+        new ColorGame(newScore,false).setVisible(true);
     }
     public void compare(){
         int x = 0;
@@ -216,10 +215,10 @@ public class Scores extends javax.swing.JFrame {
     public void pop(){
         int temp = Scores[newentry];
         Scores[newentry] = newScore;
-        if(newentry+1 < Scores.length +1){
+        if(newentry+1 < Scores.length ){
             Scores[newentry +1] = temp;
         }
-        for(int i = newentry+2;i<Scores.length+1;i++){
+        for(int i = newentry+2;i<Scores.length;i++){
             Scores[i+1] = Scores[i];
         }
     }
