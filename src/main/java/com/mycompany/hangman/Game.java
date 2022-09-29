@@ -31,7 +31,11 @@ public class Game extends javax.swing.JFrame {
         getPanels();
         curDateTime();
         dateAndTime.setVisible(true);
-        
+        this.score = 100;
+    }
+    
+    public int getScores(){
+        return this.score;
     }
 
     /**
@@ -779,7 +783,7 @@ public class Game extends javax.swing.JFrame {
     private int [] numbers;
     private int mistakes = 0;
     private int correct = 0;
-    private int score = 100;
+    private int score;
     
     public static void main(String args[]) {
         
@@ -857,6 +861,11 @@ public class Game extends javax.swing.JFrame {
         jLabel2.setText("Score : " + String.valueOf(score));
         return numbers;
     }
+    
+    public void scoreTest(){
+        ;
+    }
+    
     private void CheckMistakes(){
     if (mistakes == 1)
         head.setVisible(true);
