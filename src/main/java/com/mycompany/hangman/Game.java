@@ -34,7 +34,8 @@ public class Game extends javax.swing.JFrame {
         this.score = 100;
     }
     
-    public int getScores(){
+    public int getscores(){
+        System.out.println(score);
         return this.score;
     }
 
@@ -755,17 +756,17 @@ public class Game extends javax.swing.JFrame {
 
     private void noChoiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_noChoiceActionPerformed
         dispose();
-        new ColorGame().setVisible(true);
+        new ColorGame(getscores()).setVisible(true);
     }//GEN-LAST:event_noChoiceActionPerformed
 
     private void gameOverBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gameOverBtnActionPerformed
         dispose();
-        new ColorGame().setVisible(true);
+        new ColorGame(getscores()).setVisible(true);
     }//GEN-LAST:event_gameOverBtnActionPerformed
 
     private void noChoice1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_noChoice1ActionPerformed
         dispose();
-        new ColorGame().setVisible(true);// TODO add your handling code here:
+        new ColorGame(getscores()).setVisible(true);// TODO add your handling code here:
     }//GEN-LAST:event_noChoice1ActionPerformed
 
     private void yesChoice1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yesChoice1ActionPerformed
@@ -883,6 +884,7 @@ public class Game extends javax.swing.JFrame {
     }
 }
    public void initial(){
+            score = 100;
             jLabel4.setVisible(false);
             jLabel6.setVisible(false);
             jLabel7.setVisible(false);
@@ -1023,6 +1025,7 @@ public class Game extends javax.swing.JFrame {
             }
             }
         }
+        getscores();
         CheckMistakes();
         Correct();
     }
