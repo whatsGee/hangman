@@ -35,7 +35,6 @@ public class Game extends javax.swing.JFrame {
     }
     
     public int getscores(){
-        System.out.println(score);
         return this.score;
     }
 
@@ -1025,7 +1024,6 @@ public class Game extends javax.swing.JFrame {
             }
             }
         }
-        getscores();
         CheckMistakes();
         Correct();
     }
