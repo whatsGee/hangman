@@ -17,7 +17,10 @@ public class Scores extends javax.swing.JFrame {
         initComponents();
     }
     
-    
+    public Scores(int score) {
+        newScore = score;
+        InOut();
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -164,6 +167,8 @@ public class Scores extends javax.swing.JFrame {
             }
         });
     }
+    private int newScore;
+    private int newentry;
     private int highScore1;
     private int highScore2;
     private int highScore3;
@@ -174,14 +179,49 @@ public class Scores extends javax.swing.JFrame {
     private String Name3;
     private String Name4;
     private String Name5;
-    int [] Scores = new int [5];
+    int [] Scores = new int []{0,0,0,0,0};
     public int[] getAllscores(){
-        Scores[0] = highScore1;
-        Scores[1] = highScore1;
-        Scores[2] = highScore1;
-        Scores[3] = highScore1;
-        Scores[4] = highScore1;
+        highScore1 = Scores[0];
+        highScore2 = Scores[1];
+        highScore3 = Scores[2];
+        highScore4 = Scores[3];
+        highScore5 = Scores[4];
         return Scores;
+    }
+    public void InOut(){
+        for(int i = 0; i<Scores.length+1; i++){
+            if(Scores!= null){
+                if(Scores[i]<newScore){
+                    compare();
+                }
+                else{
+                    dispose();
+                    new ColorGame(newScore,false).setVisible(true);
+                }
+            }    
+        }
+    }
+    public void compare(){
+        int newentry;
+        int x = 0;
+            if(Scores[x]>newScore){
+                x++;
+                compare();
+            }
+            else if(Scores[x]<newScore){
+                newentry = x;
+                pop();
+            }
+    }
+    public void pop(){
+        int temp = Scores[newentry];
+        Scores[newentry] = newScore;
+        if(newentry < Scores.length +1){
+            Scores[newentry +1] = temp;
+        }
+        for(int i = newentry+2;i<Scores.length+1;i++){
+            Scores[i+1] = Scores[i];
+        }
     }
     public void printScore1(){
     Score1.setText(String.valueOf(highScore1));
