@@ -18,6 +18,7 @@ public class Scores extends javax.swing.JFrame {
     }
     
     public Scores(int score) {
+        initComponents();
         newScore = score;
         InOut();
     }
@@ -179,7 +180,7 @@ public class Scores extends javax.swing.JFrame {
     private String Name3;
     private String Name4;
     private String Name5;
-    int [] Scores = new int []{0,0,0,0,0};
+    int [] Scores = new int []{1000,1000,1000,1000,1000};
     public int[] getAllscores(){
         highScore1 = Scores[0];
         highScore2 = Scores[1];
@@ -190,21 +191,19 @@ public class Scores extends javax.swing.JFrame {
     }
     public void InOut(){
         for(int i = 0; i<Scores.length+1; i++){
-            if(Scores!= null){
-                if(Scores[i]<newScore){
+                if(Scores[i] < newScore){
                     compare();
                 }
                 else{
                     dispose();
                     new ColorGame(newScore,false).setVisible(true);
-                }
-            }    
+                }    
         }
     }
     public void compare(){
-        int newentry;
         int x = 0;
-            if(Scores[x]>newScore){
+        if(x < 5){
+            if(Scores[x] > newScore){
                 x++;
                 compare();
             }
@@ -212,11 +211,12 @@ public class Scores extends javax.swing.JFrame {
                 newentry = x;
                 pop();
             }
+        }
     }
     public void pop(){
         int temp = Scores[newentry];
         Scores[newentry] = newScore;
-        if(newentry < Scores.length +1){
+        if(newentry+1 < Scores.length +1){
             Scores[newentry +1] = temp;
         }
         for(int i = newentry+2;i<Scores.length+1;i++){
@@ -227,16 +227,16 @@ public class Scores extends javax.swing.JFrame {
     Score1.setText(String.valueOf(highScore1));
     }
     public void printScore2(){
-    Score1.setText(String.valueOf(highScore2));
+    Score2.setText(String.valueOf(highScore2));
     }
     public void printScore3(){
-    Score1.setText(String.valueOf(highScore3));
+    Score3.setText(String.valueOf(highScore3));
     }
     public void printScore4(){
-    Score1.setText(String.valueOf(highScore4));
+    Score4.setText(String.valueOf(highScore4));
     }
     public void printScore5(){
-    Score1.setText(String.valueOf(highScore5));
+    Score5.setText(String.valueOf(highScore5));
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Score1;

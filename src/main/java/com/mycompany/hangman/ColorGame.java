@@ -39,6 +39,7 @@ public class ColorGame extends javax.swing.JFrame {
     }
     public ColorGame(int scores, boolean highscore){
         initComponents();
+        Score = scores;
         blueBtn.setVisible(false);
             yellowBtn.setVisible(false);
             purpleBtn.setVisible(false);
@@ -46,6 +47,8 @@ public class ColorGame extends javax.swing.JFrame {
             redBtn.setVisible(false);
             randCol.setVisible(false);
             endPage.setVisible(true);
+            curDateTime();
+            jLabel2.setText("Score : " + String.valueOf(Score));
             jLabel1.setText("Score : " + String.valueOf(scores));
     }
 
@@ -477,15 +480,8 @@ public class ColorGame extends javax.swing.JFrame {
     
     public void endGame(){
         if(Counter == 5){
-            blueBtn.setVisible(false);
-            yellowBtn.setVisible(false);
-            purpleBtn.setVisible(false);
-            greenBtn.setVisible(false);
-            redBtn.setVisible(false);
-            randCol.setVisible(false);
-            endPage.setVisible(true);
-            jLabel1.setText("Score : " + String.valueOf(Score));
-            //new Scores(Score).setVisible(true);
+            dispose();
+            new Scores(Score).setVisible(true);
         }
     }
 
