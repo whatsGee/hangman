@@ -24,6 +24,7 @@ public class ColorGame extends javax.swing.JFrame {
         jLabel2.setText("Score : " + String.valueOf(Score));
         setRandom();
         setForeground();
+        curDateTime();
         endPage.setVisible(false);
     }
     public ColorGame(int scores){
@@ -33,6 +34,7 @@ public class ColorGame extends javax.swing.JFrame {
         jLabel2.setText("Score : " + String.valueOf(scores));
         setRandom();
         setForeground();
+        curDateTime();
         endPage.setVisible(false);
     }
 
@@ -59,6 +61,7 @@ public class ColorGame extends javax.swing.JFrame {
         yellowBtn = new javax.swing.JButton();
         randCol = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        dateAndTime = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Color Game");
@@ -201,6 +204,11 @@ public class ColorGame extends javax.swing.JFrame {
         jLabel2.setText("Score");
         jPanel1.add(jLabel2);
         jLabel2.setBounds(490, 20, 80, 20);
+
+        dateAndTime.setForeground(new java.awt.Color(255, 255, 255));
+        dateAndTime.setText("dateAndTime");
+        jPanel1.add(dateAndTime);
+        dateAndTime.setBounds(0, 0, 170, 30);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 600, 400);
@@ -443,6 +451,19 @@ public class ColorGame extends javax.swing.JFrame {
         }
     }
     
+    public void curDateTime()
+    {
+        int delay = 0; //milliseconds
+        ActionListener taskPerformer = new ActionListener() {
+          public void actionPerformed(ActionEvent evt) {
+              String date = new java.text.SimpleDateFormat("MM/dd/yyyy HH:mm:ss").format(new java.util.Date(System.currentTimeMillis()));
+              dateAndTime.setText(date);
+          }
+      };
+      new Timer(delay, taskPerformer).start();
+        
+    }
+    
     public void endGame(){
         if(Counter == 5){
             blueBtn.setVisible(false);
@@ -458,6 +479,7 @@ public class ColorGame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton blueBtn;
+    private javax.swing.JLabel dateAndTime;
     private javax.swing.JPanel endPage;
     private javax.swing.JButton greenBtn;
     private javax.swing.JButton jButton1;

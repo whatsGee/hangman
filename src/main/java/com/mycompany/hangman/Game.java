@@ -6,6 +6,8 @@ package com.mycompany.hangman;
 import java.util.Random;
 import java.time.LocalDateTime;  
 import java.time.format.DateTimeFormatter;
+import javax.swing.Timer;
+import java.awt.event.*;
 
 /**
  *
@@ -824,9 +826,15 @@ public class Game extends javax.swing.JFrame {
     
     public void curDateTime()
     {
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM/dd/yyy HH:mm:ss");
-        LocalDateTime now = LocalDateTime.now();
-        dateAndTime.setText(dtf.format(now));
+        int delay = 0; //milliseconds
+        ActionListener taskPerformer = new ActionListener() {
+          public void actionPerformed(ActionEvent evt) {
+              String date = new java.text.SimpleDateFormat("MM/dd/yyyy HH:mm:ss").format(new java.util.Date(System.currentTimeMillis()));
+              dateAndTime.setText(date);
+          }
+      };
+      new Timer(delay, taskPerformer).start();
+        
     }
     
     public String getRandomWord()
