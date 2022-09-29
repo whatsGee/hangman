@@ -37,6 +37,17 @@ public class ColorGame extends javax.swing.JFrame {
         curDateTime();
         endPage.setVisible(false);
     }
+    public ColorGame(int [] scores){
+        initComponents();
+        blueBtn.setVisible(false);
+            yellowBtn.setVisible(false);
+            purpleBtn.setVisible(false);
+            greenBtn.setVisible(false);
+            redBtn.setVisible(false);
+            randCol.setVisible(false);
+            endPage.setVisible(true);
+            jLabel1.setText("Score : " + String.valueOf(Score));
+    }
 
    
 

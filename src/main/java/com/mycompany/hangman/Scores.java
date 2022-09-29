@@ -164,11 +164,11 @@ public class Scores extends javax.swing.JFrame {
             }
         });
     }
-    private int highScore1 = 0;
-    private int highScore2 = 0;
-    private int highScore3 = 0;
-    private int highScore4 = 0;
-    private int highScore5 = 0;
+    private int highScore1;
+    private int highScore2;
+    private int highScore3;
+    private int highScore4;
+    private int highScore5;
     private String Name1;
     private String Name2;
     private String Name3;
