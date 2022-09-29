@@ -482,6 +482,7 @@ public class ColorGame extends javax.swing.JFrame {
         if(Counter == 5){
             dispose();
             new Scores(Score).setVisible(true);
+            Counter++;
         }
     }
 

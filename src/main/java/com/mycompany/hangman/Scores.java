@@ -193,11 +193,14 @@ public class Scores extends javax.swing.JFrame {
         for(int i = 0; i<Scores.length; i++){
                 if(Scores[i] < newScore){
                     compare();
+                    break;
                 }
-                   
+                else if(Scores[i] > newScore){
+                    dispose();
+                    new ColorGame(newScore,false).setVisible(true);
+                    break;
+                }    
         }
-        dispose();
-        new ColorGame(newScore,false).setVisible(true);
     }
     public void compare(){
         int x = 0;
