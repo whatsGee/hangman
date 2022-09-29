@@ -37,7 +37,6 @@ public class Credits extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(600, 400));
-        setPreferredSize(new java.awt.Dimension(600, 400));
         setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Gadugi", 1, 48)); // NOI18N

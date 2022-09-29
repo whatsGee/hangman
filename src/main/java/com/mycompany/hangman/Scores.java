@@ -16,6 +16,8 @@ public class Scores extends javax.swing.JFrame {
     public Scores() {
         initComponents();
     }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
