@@ -35,8 +35,7 @@ public class ColorGame extends javax.swing.JFrame {
         setForeground();
         endPage.setVisible(false);
     }
-    Game sco = new Game();
-    int newScore = sco.getscores();
+
    
 
     /**
@@ -426,7 +425,7 @@ public class ColorGame extends javax.swing.JFrame {
             }
         });
     }
-    private int Score = newScore;
+    private int Score;
     private int Random;
     private int Counter = 0;
     private int Number = 0;
