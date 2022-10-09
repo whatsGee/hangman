@@ -8,6 +8,7 @@ package com.mycompany.hangman;
  *
  * @author Gian
  */
+
 public class Sudoku extends javax.swing.JFrame {
 
     /**
