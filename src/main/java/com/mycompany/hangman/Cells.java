@@ -35,7 +35,7 @@ public class Cells extends JTextField {
         super.setFont(numbers);
     }
     
-    public void game(int number, boolean isGiven){
+    public void newGame(int number, boolean isGiven){
         this.number = number;
         status = isGiven ? GameStatus.GIVEN : GameStatus.INPUT;
         paint();

@@ -4,18 +4,33 @@
  */
 package com.mycompany.hangman;
 
+import java.awt.*;
+import javax.swing.*;
+
 /**
  *
  * @author Gian
  */
 
 public class Sudoku extends javax.swing.JFrame {
+    
+    Board board = new Board();
 
     /**
      * Creates new form Sudoku
      */
     public Sudoku() {
         initComponents();
+        Container container = getContentPane();
+        container.setLayout(new BorderLayout());
+        
+        container.add(board, BorderLayout.CENTER);
+        
+        board.GameBoard();
+        //pack();
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setTitle("Sudoku");
+        setVisible(false);
     }
 
     /**

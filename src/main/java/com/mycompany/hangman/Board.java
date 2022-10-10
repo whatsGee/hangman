@@ -20,7 +20,7 @@ public class Board extends JPanel {
     public static final int BOARD_HEIGHT = CELLS * GRID_SIZE;
     
     private Cells[][] cells  = new Cells[GRID_SIZE][GRID_SIZE];
-    private Game game = new Game();
+    private Gameplay game = new Gameplay();
     
     public Board(){
         super.setLayout(new GridLayout(GRID_SIZE, GRID_SIZE));
@@ -33,8 +33,12 @@ public class Board extends JPanel {
         }
     }
     
-    public void Game(){
-        //TO-DO implement game puzzle here
+    public void GameBoard(){
+        game.newGame(2);
+        
+        for(int row = 0; row < GRID_SIZE; ++row)
+            for(int col = 0; col < GRID_SIZE; ++col)
+                cells[row][col].newGame(game.num[row][col], game.isGiven[row][col]);
     }
     
     public boolean isGuessed(){
