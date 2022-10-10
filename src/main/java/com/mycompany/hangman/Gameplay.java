@@ -9,5 +9,4 @@ package com.mycompany.hangman;
  * @author Gian
  */
 public class Gameplay {
-    
 }
