@@ -181,7 +181,7 @@ public class Scores extends javax.swing.JFrame {
     private String Name4;
     private String Name5;
     private int x = 0;
-    Integer [] Scores = new Integer []{1000,1000,1000,1000,1000};
+    Integer [] Scores = new Integer [5];
     public Integer[] getAllscores(){
         highScore1 = Scores[0];
         highScore2 = Scores[1];
@@ -192,7 +192,12 @@ public class Scores extends javax.swing.JFrame {
     }
     public void InOut(){
         for(int i = 0; i<Scores.length; i++){
-                if(Scores[i] < newScore){
+                if(Scores[i] == null){
+                    newentry = i;
+                    Scores[newentry] = newScore;
+                    break;
+                }
+                else if(Scores[i] < newScore){
                     compare();
                     break;
                 }
