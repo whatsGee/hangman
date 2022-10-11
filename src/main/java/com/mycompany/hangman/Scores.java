@@ -180,8 +180,8 @@ public class Scores extends javax.swing.JFrame {
     private String Name3;
     private String Name4;
     private String Name5;
-    int [] Scores = new int []{1000,1000,1000,1000,1000};
-    public int[] getAllscores(){
+    Integer [] Scores = new Integer []{1000,1000,1000,1000,1000};
+    public Integer[] getAllscores(){
         highScore1 = Scores[0];
         highScore2 = Scores[1];
         highScore3 = Scores[2];
@@ -195,7 +195,7 @@ public class Scores extends javax.swing.JFrame {
                     compare();
                     break;
                 }
-                else if(Scores[i] > newScore){
+                else {
                     dispose();
                     new ColorGame(newScore,false).setVisible(true);
                     break;
@@ -205,24 +205,29 @@ public class Scores extends javax.swing.JFrame {
     public void compare(){
         int x = 0;
         if(x < 5){
-            if(Scores[x] > newScore){
-                x++;
-                compare();
+            if (Scores[x] != null){
+                if(Scores[x] > newScore){
+                    x++;
+                    compare();
+                }
+                else if(Scores[x] < newScore){
+                    newentry = x;
+                    pop();
+                }
             }
-            else if(Scores[x]<newScore){
+            else{
                 newentry = x;
-                pop();
             }
         }
     }
     public void pop(){
         int temp = Scores[newentry];
+        int temp2;
         Scores[newentry] = newScore;
-        if(newentry+1 < Scores.length ){
-            Scores[newentry +1] = temp;
-        }
-        for(int i = newentry+2;i<Scores.length;i++){
-            Scores[i+1] = Scores[i];
+        for(int i = newentry;i<Scores.length;i++){
+            temp2 = Scores[i + 1];
+            Scores[i + 1] = temp;
+            temp = temp2;
         }
     }
     public void printScore1(){
