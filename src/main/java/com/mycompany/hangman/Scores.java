@@ -180,6 +180,7 @@ public class Scores extends javax.swing.JFrame {
     private String Name3;
     private String Name4;
     private String Name5;
+    private int x = 0;
     Integer [] Scores = new Integer []{1000,1000,1000,1000,1000};
     public Integer[] getAllscores(){
         highScore1 = Scores[0];
@@ -203,7 +204,6 @@ public class Scores extends javax.swing.JFrame {
         }
     }
     public void compare(){
-        int x = 0;
         if(x < 5){
             if (Scores[x] != null){
                 if(Scores[x] > newScore){
