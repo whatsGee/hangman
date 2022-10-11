@@ -4,6 +4,13 @@
  */
 package com.mycompany.hangman;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.KeyEvent;
+import javax.swing.AbstractAction;
+import javax.swing.Action;
+import javax.swing.JComponent;
+import javax.swing.KeyStroke;
+
 /**
  *
  * @author Owner
@@ -15,6 +22,29 @@ public class Menu extends javax.swing.JFrame {
      */
     public Menu() {
         initComponents();
+        playButton.setToolTipText("Click this button to start the game.");
+        scoreButton.setToolTipText("Click this button to view the high scores.");
+        creditButton.setToolTipText("Click this button to see who made this program.");
+    
+        
+        KeyStroke exitKey = KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0, false);
+        Action exitAction = new AbstractAction(){
+            public void actionPerformed(ActionEvent e){
+                System.exit(0);
+            }
+        };
+        getRootPane().getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(exitKey, "ESCAPE");
+        getRootPane().getActionMap().put("ESCAPE", exitAction);
+        
+        KeyStroke creditsKey = KeyStroke.getKeyStroke(KeyEvent.VK_F1, 0, false);
+        Action creditsAction = new AbstractAction(){
+            public void actionPerformed(ActionEvent e){
+                dispose();
+                new Credits().setVisible(true);
+            }
+        };
+        getRootPane().getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(creditsKey, "F1");
+        getRootPane().getActionMap().put("F1", creditsAction);
     }
 
     /**
@@ -119,6 +149,7 @@ public class Menu extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -141,7 +172,7 @@ public class Menu extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+                
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {

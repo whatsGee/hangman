@@ -10,7 +10,7 @@ package com.mycompany.hangman;
  * @author Owner
  */
 public class Hangman {
-
+        
     public static void main(String[] args) {
         new Loading().setVisible(true);
     }

@@ -26,6 +26,25 @@ public class ColorGame extends javax.swing.JFrame {
         setForeground();
         curDateTime();
         endPage.setVisible(false);
+        
+                KeyStroke exitKey = KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0, false);
+        Action exitAction = new AbstractAction(){
+            public void actionPerformed(ActionEvent e){
+                System.exit(0);
+            }
+        };
+        getRootPane().getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(exitKey, "ESCAPE");
+        getRootPane().getActionMap().put("ESCAPE", exitAction);
+        
+        KeyStroke creditsKey = KeyStroke.getKeyStroke(KeyEvent.VK_F1, 0, false);
+        Action creditsAction = new AbstractAction(){
+            public void actionPerformed(ActionEvent e){
+                dispose();
+                new Credits().setVisible(true);
+            }
+        };
+        getRootPane().getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(creditsKey, "F1");
+        getRootPane().getActionMap().put("F1", creditsAction);
     }
     public ColorGame(int scores){
         Score = scores;
@@ -36,6 +55,25 @@ public class ColorGame extends javax.swing.JFrame {
         setForeground();
         curDateTime();
         endPage.setVisible(false);
+        
+                KeyStroke exitKey = KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0, false);
+        Action exitAction = new AbstractAction(){
+            public void actionPerformed(ActionEvent e){
+                System.exit(0);
+            }
+        };
+        getRootPane().getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(exitKey, "ESCAPE");
+        getRootPane().getActionMap().put("ESCAPE", exitAction);
+        
+        KeyStroke creditsKey = KeyStroke.getKeyStroke(KeyEvent.VK_F1, 0, false);
+        Action creditsAction = new AbstractAction(){
+            public void actionPerformed(ActionEvent e){
+                dispose();
+                new Credits().setVisible(true);
+            }
+        };
+        getRootPane().getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(creditsKey, "F1");
+        getRootPane().getActionMap().put("F1", creditsAction);
     }
     public ColorGame(int scores, boolean highscore){
         initComponents();
@@ -50,6 +88,25 @@ public class ColorGame extends javax.swing.JFrame {
             curDateTime();
             jLabel2.setText("Score : " + String.valueOf(Score));
             jLabel1.setText("Score : " + String.valueOf(scores));
+            
+                    KeyStroke exitKey = KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0, false);
+        Action exitAction = new AbstractAction(){
+            public void actionPerformed(ActionEvent e){
+                System.exit(0);
+            }
+        };
+        getRootPane().getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(exitKey, "ESCAPE");
+        getRootPane().getActionMap().put("ESCAPE", exitAction);
+        
+        KeyStroke creditsKey = KeyStroke.getKeyStroke(KeyEvent.VK_F1, 0, false);
+        Action creditsAction = new AbstractAction(){
+            public void actionPerformed(ActionEvent e){
+                dispose();
+                new Credits().setVisible(true);
+            }
+        };
+        getRootPane().getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(creditsKey, "F1");
+        getRootPane().getActionMap().put("F1", creditsAction);
     }
 
    

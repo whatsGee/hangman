@@ -8,6 +8,10 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import javax.swing.Timer;
 import java.awt.event.*;
+import javax.swing.AbstractAction;
+import javax.swing.Action;
+import javax.swing.JComponent;
+import javax.swing.KeyStroke;
 
 /**
  *
@@ -34,6 +38,27 @@ public class Game extends javax.swing.JFrame {
         curDateTime();
         dateAndTime.setVisible(true);
         this.score = 100;
+        backScores.setToolTipText("Click this button to return to the menu.");
+        jButton1.setToolTipText("Click this button to skip to the next game.");
+        
+                KeyStroke exitKey = KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0, false);
+        Action exitAction = new AbstractAction(){
+            public void actionPerformed(ActionEvent e){
+                System.exit(0);
+            }
+        };
+        getRootPane().getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(exitKey, "ESCAPE");
+        getRootPane().getActionMap().put("ESCAPE", exitAction);
+        
+        KeyStroke creditsKey = KeyStroke.getKeyStroke(KeyEvent.VK_F1, 0, false);
+        Action creditsAction = new AbstractAction(){
+            public void actionPerformed(ActionEvent e){
+                dispose();
+                new Credits().setVisible(true);
+            }
+        };
+        getRootPane().getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(creditsKey, "F1");
+        getRootPane().getActionMap().put("F1", creditsAction);
     }
     
     public int getscores(){
@@ -823,6 +848,8 @@ public class Game extends javax.swing.JFrame {
             }
         });
     }
+    
+    
     
     public void curDateTime()
     {

@@ -4,6 +4,13 @@
  */
 package com.mycompany.hangman;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.KeyEvent;
+import javax.swing.AbstractAction;
+import javax.swing.Action;
+import javax.swing.JComponent;
+import javax.swing.KeyStroke;
+
 /**
  *
  * @author Owner
@@ -15,6 +22,26 @@ public class Credits extends javax.swing.JFrame {
      */
     public Credits() {
         initComponents();
+        backScores.setToolTipText("Click this button to return to the menu.");
+        
+                KeyStroke exitKey = KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0, false);
+        Action exitAction = new AbstractAction(){
+            public void actionPerformed(ActionEvent e){
+                System.exit(0);
+            }
+        };
+        getRootPane().getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(exitKey, "ESCAPE");
+        getRootPane().getActionMap().put("ESCAPE", exitAction);
+        
+        KeyStroke creditsKey = KeyStroke.getKeyStroke(KeyEvent.VK_F1, 0, false);
+        Action creditsAction = new AbstractAction(){
+            public void actionPerformed(ActionEvent e){
+                dispose();
+                new Credits().setVisible(true);
+            }
+        };
+        getRootPane().getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(creditsKey, "F1");
+        getRootPane().getActionMap().put("F1", creditsAction);
     }
 
     /**
