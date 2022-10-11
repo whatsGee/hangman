@@ -249,8 +249,8 @@ public class Scores extends javax.swing.JFrame {
                 }
             }
             else{
-                setScore();
                 newentry = x;
+                setScore();
             }
         }
     }
