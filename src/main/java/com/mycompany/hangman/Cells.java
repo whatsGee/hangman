@@ -15,8 +15,8 @@ import javax.swing.JTextField;
 public class Cells extends JTextField {
     public static final Color bgGiven = new Color(240, 240, 240);
     public static final Color fgGiven = Color.BLUE;
-    public static final Color fgNotGiven = Color.GRAY;
-    public static final Color bgInput = new Color(0,0,0);
+    public static final Color fgNotGiven = Color.MAGENTA;
+    public static final Color bgInput = new Color(250,250,250);
     public static final Color bgCorrect = new Color(0,200,0);
     public static final Color bgWrong = new Color (200, 0,0);
     public static final Font numbers = new Font("Copperplate Gothic Bold", Font.BOLD, 28);
