@@ -31,15 +31,15 @@ public class Gameplay {
             for(int col = 0; col < Board.GRID_SIZE; ++col)
                 num[row][col] = nums[row][col];
         
-        boolean[][] givenNums = {{false, true, true, false, true, false, true, true, false},
-                                {true, true, true, true, true, true, false, true, true},
-                                {true, false, true, true, true, true, false, false, true},
-                                {false, true, false, true, false, true, false, false, true},
-                                {true, true, true, true, false, true, true, true, true},
-                                {true, false, false, true, false, true, false, true, false},
-                                {true, false, false, true, true, true, true, false, true},
-                                {true, true, false, true, true, true, true, true, true},
-                                {false, true, true, false, true, false, true, true, false}};
+        boolean[][] givenNums = {{true, false, false, true, false, true, false, false, true},
+                                {false, false, false, false, false, false, true, false, false},
+                                {false, true, false, false, false, false, true, true, false},
+                                {true, false, true, false, true, false, true, true, false},
+                                {false, false, false, false, true, false, false, false, false},
+                                {false, true, true, false, true, false, true, false, true},
+                                {false, true, true, false, false, false, false, true, false},
+                                {false, false, true, false, false, false, false, false, false},
+                                {true, false, false, true, false, true, false, false, true}};
         
         for(int row = 0; row < Board.GRID_SIZE; ++row)
             for(int col = 0; col < Board.GRID_SIZE; ++col)
