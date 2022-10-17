@@ -17,7 +17,6 @@ import javax.swing.*;
 public class Sudoku extends javax.swing.JFrame {
     
     Board board = new Board();
-    JButton btnNewGame = new JButton("New Game");
 
     /**
      * Creates new form Sudoku
