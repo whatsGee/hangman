@@ -73,6 +73,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(600, 500));
+        setResizable(false);
 
         jButton1.setText("Quit");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
