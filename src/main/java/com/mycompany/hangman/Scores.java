@@ -59,22 +59,23 @@ public class Scores extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        name1 = new javax.swing.JLabel();
         Score5 = new javax.swing.JLabel();
         backScores2 = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        name2 = new javax.swing.JLabel();
+        name3 = new javax.swing.JLabel();
+        name4 = new javax.swing.JLabel();
+        name5 = new javax.swing.JLabel();
         Score1 = new javax.swing.JLabel();
         Score2 = new javax.swing.JLabel();
         Score3 = new javax.swing.JLabel();
         Score4 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Scoreboard");
-        setMaximumSize(new java.awt.Dimension(600, 400));
-        setPreferredSize(new java.awt.Dimension(600, 400));
         setResizable(false);
         getContentPane().setLayout(null);
 
@@ -88,10 +89,10 @@ public class Scores extends javax.swing.JFrame {
         getContentPane().add(jLabel3);
         jLabel3.setBounds(144, 129, 320, 35);
 
-        jLabel2.setFont(new java.awt.Font("Candara Light", 0, 24)); // NOI18N
-        jLabel2.setText("___");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(140, 170, 40, 30);
+        name1.setFont(new java.awt.Font("Candara Light", 0, 24)); // NOI18N
+        name1.setText("___");
+        getContentPane().add(name1);
+        name1.setBounds(140, 170, 40, 30);
 
         Score5.setFont(new java.awt.Font("Candara Light", 0, 24)); // NOI18N
         Score5.setText("___");
@@ -110,25 +111,25 @@ public class Scores extends javax.swing.JFrame {
         getContentPane().add(backScores2);
         backScores2.setBounds(6, 365, 72, 23);
 
-        jLabel5.setFont(new java.awt.Font("Candara Light", 0, 24)); // NOI18N
-        jLabel5.setText("___");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(140, 200, 36, 30);
+        name2.setFont(new java.awt.Font("Candara Light", 0, 24)); // NOI18N
+        name2.setText("___");
+        getContentPane().add(name2);
+        name2.setBounds(140, 200, 36, 30);
 
-        jLabel6.setFont(new java.awt.Font("Candara Light", 0, 24)); // NOI18N
-        jLabel6.setText("___");
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(140, 240, 40, 30);
+        name3.setFont(new java.awt.Font("Candara Light", 0, 24)); // NOI18N
+        name3.setText("___");
+        getContentPane().add(name3);
+        name3.setBounds(140, 240, 40, 30);
 
-        jLabel7.setFont(new java.awt.Font("Candara Light", 0, 24)); // NOI18N
-        jLabel7.setText("___");
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(140, 280, 40, 30);
+        name4.setFont(new java.awt.Font("Candara Light", 0, 24)); // NOI18N
+        name4.setText("___");
+        getContentPane().add(name4);
+        name4.setBounds(140, 280, 40, 30);
 
-        jLabel8.setFont(new java.awt.Font("Candara Light", 0, 24)); // NOI18N
-        jLabel8.setText("___");
-        getContentPane().add(jLabel8);
-        jLabel8.setBounds(140, 320, 40, 30);
+        name5.setFont(new java.awt.Font("Candara Light", 0, 24)); // NOI18N
+        name5.setText("___");
+        getContentPane().add(name5);
+        name5.setBounds(140, 320, 40, 30);
 
         Score1.setFont(new java.awt.Font("Candara Light", 0, 24)); // NOI18N
         Score1.setText("___");
@@ -149,6 +150,20 @@ public class Scores extends javax.swing.JFrame {
         Score4.setText("___");
         getContentPane().add(Score4);
         Score4.setBounds(420, 280, 40, 30);
+
+        jPanel1.setLayout(null);
+
+        jLabel2.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel2.setText("What is your name?");
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(190, 130, 210, 50);
+
+        jLabel4.setText("jLabel4");
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(230, 190, 70, 40);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(10, 20, 590, 380);
 
         pack();
         setLocationRelativeTo(null);
@@ -309,18 +324,21 @@ public class Scores extends javax.swing.JFrame {
     Score5.setText(String.valueOf(highScore5));
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Score1;
-    private javax.swing.JLabel Score2;
-    private javax.swing.JLabel Score3;
-    private javax.swing.JLabel Score4;
-    private javax.swing.JLabel Score5;
+    public javax.swing.JLabel Score1;
+    public javax.swing.JLabel Score2;
+    public javax.swing.JLabel Score3;
+    public javax.swing.JLabel Score4;
+    public javax.swing.JLabel Score5;
     private javax.swing.JButton backScores2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JPanel jPanel1;
+    public javax.swing.JLabel name1;
+    public javax.swing.JLabel name2;
+    public javax.swing.JLabel name3;
+    public javax.swing.JLabel name4;
+    public javax.swing.JLabel name5;
     // End of variables declaration//GEN-END:variables
 }
