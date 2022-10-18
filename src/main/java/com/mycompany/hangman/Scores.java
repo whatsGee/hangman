@@ -45,7 +45,7 @@ public class Scores extends javax.swing.JFrame {
     public Scores(int score) {
         initComponents();
         newScore = score;
-        InOut();
+        InOut(newScore);
     }
 
     /**
@@ -242,7 +242,8 @@ public class Scores extends javax.swing.JFrame {
             printScore5();
         }
     }
-    public void InOut(){
+    public void InOut(int score){
+        newScore = score;
         for(int i = 0; i<Scores.length; i++){
                 if(Scores[i] == null){
                     newentry = i;

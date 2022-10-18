@@ -538,7 +538,7 @@ public class ColorGame extends javax.swing.JFrame {
     public void endGame(){
         if(Counter == 5){
             dispose();
-            new Scores(Score).setVisible(true);
+            
             Counter++;
             new Sudoku().setVisible(true);
         }

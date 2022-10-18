@@ -16,7 +16,10 @@ import javax.swing.*;
 
 public class Sudoku extends javax.swing.JFrame {
     Board board = new Board();
+    ColorGame ColorGame = new ColorGame();
+    Scores Scores = new Scores();
     private int score;
+    private int combinedscore;
     /**
      * Creates new form Sudoku
      */
@@ -207,11 +210,17 @@ public class Sudoku extends javax.swing.JFrame {
         jButton1.setVisible(false);
         jButton2.setVisible(false);
         jPanel1.setVisible(true);
+        combinedscore = score + ColorGame.getScore();
+        Scores.InOut(combinedscore);
+        new Credits().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void Exit2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Exit2ActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
+        score = 0;
+        combinedscore = score + ColorGame.getScore();
+        Scores.InOut(combinedscore);
         new Credits().setVisible(true);
     }//GEN-LAST:event_Exit2ActionPerformed
 
