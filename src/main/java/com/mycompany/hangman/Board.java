@@ -18,6 +18,7 @@ public class Board extends JPanel {
     public static final int CELLS = 60;
     public static final int BOARD_WIDTH = CELLS * GRID_SIZE;
     public static final int BOARD_HEIGHT = CELLS * GRID_SIZE;
+    public int Score = 540;
     
     private Cells[][] cells  = new Cells[GRID_SIZE][GRID_SIZE];
     private Gameplay game = new Gameplay();
@@ -39,7 +40,9 @@ public class Board extends JPanel {
             }
         super.setPreferredSize(new Dimension(BOARD_WIDTH, BOARD_HEIGHT));
     }
-    
+    public int getScore(){
+        return Score;
+    }
     public void GameBoard(){
         game.newGame(2);
         
@@ -70,7 +73,7 @@ public class Board extends JPanel {
                 source.status = GameStatus.CORRECT;
             else
                 source.status = GameStatus.WRONG;
-            
+                Score = Score -10;
             source.paint();
         }
     }
