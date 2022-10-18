@@ -22,6 +22,7 @@ public class Scores extends javax.swing.JFrame {
      */
     public Scores() {
         initComponents();
+        jPanel1.setVisible(false);
                 KeyStroke exitKey = KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0, false);
         Action exitAction = new AbstractAction(){
             public void actionPerformed(ActionEvent e){
@@ -46,6 +47,7 @@ public class Scores extends javax.swing.JFrame {
         initComponents();
         newScore = score;
         InOut(newScore);
+        jPanel1.setVisible(false);
     }
 
     /**
