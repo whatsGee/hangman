@@ -71,7 +71,7 @@ public class Sudoku extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(600, 500));
+        setPreferredSize(new java.awt.Dimension(600, 700));
         setResizable(false);
 
         jButton1.setText("Quit");
@@ -105,7 +105,7 @@ public class Sudoku extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(200, Short.MAX_VALUE)
+                .addContainerGap(395, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton1)
@@ -114,7 +114,7 @@ public class Sudoku extends javax.swing.JFrame {
                 .addGap(142, 142, 142))
         );
 
-        setSize(new java.awt.Dimension(616, 443));
+        setSize(new java.awt.Dimension(616, 638));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

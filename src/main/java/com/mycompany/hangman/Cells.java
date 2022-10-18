@@ -31,7 +31,7 @@ public class Cells extends JTextField {
         super();
         this.row = row;
         this.col = col;
-        super.setHorizontalAlignment(CENTER);
+        super.setHorizontalAlignment(JTextField.CENTER);
         super.setFont(numbers);
     }
     

@@ -31,6 +31,13 @@ public class Board extends JPanel {
                 super.add(cells[row][col]);
             }
         }
+        CellInputListener listener = new CellInputListener();
+        for(int row = 0; row < GRID_SIZE; ++row)
+            for(int col = 0; col < GRID_SIZE; ++col){
+                if(cells[row][col].isEditable())
+                    cells[row][col].addActionListener(listener);
+            }
+        super.setPreferredSize(new Dimension(BOARD_WIDTH, BOARD_HEIGHT));
     }
     
     public void GameBoard(){
