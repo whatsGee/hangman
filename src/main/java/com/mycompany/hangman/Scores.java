@@ -45,8 +45,6 @@ public class Scores extends javax.swing.JFrame {
     
     public Scores(int score) {
         initComponents();
-        newScore = score;
-        InOut(newScore);
         jPanel1.setVisible(false);
         
     }
@@ -79,7 +77,9 @@ public class Scores extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Scoreboard");
+        setMinimumSize(new java.awt.Dimension(600, 400));
         setResizable(false);
+        setSize(new java.awt.Dimension(600, 400));
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Sitka Small", 1, 48)); // NOI18N
@@ -154,6 +154,8 @@ public class Scores extends javax.swing.JFrame {
         getContentPane().add(Score4);
         Score4.setBounds(420, 280, 40, 30);
 
+        jPanel1.setMinimumSize(new java.awt.Dimension(300, 200));
+        jPanel1.setSize(new java.awt.Dimension(300, 200));
         jPanel1.setLayout(null);
 
         jLabel2.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
@@ -166,7 +168,7 @@ public class Scores extends javax.swing.JFrame {
         Name.setBounds(110, 80, 64, 23);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(10, 20, 590, 380);
+        jPanel1.setBounds(10, 20, 300, 200);
 
         pack();
         setLocationRelativeTo(null);
@@ -269,7 +271,6 @@ public class Scores extends javax.swing.JFrame {
     }
     public void InOut(int score){
         newScore = score;
-        Initial();
         for(int i = 0; i<Scores.length; i++){
                 if(Scores[i] == null){
                     newentry = i;
