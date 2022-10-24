@@ -212,7 +212,6 @@ public class Sudoku extends javax.swing.JFrame {
         jPanel1.setVisible(true);
         combinedscore = score + ColorGame.getScore();
         Scores.InOut(combinedscore);
-        new Credits().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void Exit2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Exit2ActionPerformed
