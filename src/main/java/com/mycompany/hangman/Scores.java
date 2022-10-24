@@ -154,22 +154,19 @@ public class Scores extends javax.swing.JFrame {
         getContentPane().add(Score4);
         Score4.setBounds(420, 280, 40, 30);
 
-        jPanel1.setPreferredSize(new java.awt.Dimension(300, 200));
-        jPanel1.setSize(new java.awt.Dimension(300, 200));
         jPanel1.setLayout(null);
 
         jLabel2.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel2.setText("What is your name?");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(80, 30, 170, 50);
+        jLabel2.setBounds(80, 30, 210, 50);
 
         Name.setText("Name");
         jPanel1.add(Name);
-        Name.setBounds(120, 100, 64, 23);
+        Name.setBounds(110, 80, 64, 23);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 300, 200);
-        jPanel1.getAccessibleContext().setAccessibleName("");
+        jPanel1.setBounds(10, 20, 590, 380);
 
         pack();
         setLocationRelativeTo(null);
