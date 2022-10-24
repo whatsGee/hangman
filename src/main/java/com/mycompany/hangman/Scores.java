@@ -77,8 +77,8 @@ public class Scores extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Scoreboard");
-        setMinimumSize(new java.awt.Dimension(600, 400));
-        setResizable(false);
+        setBounds(new java.awt.Rectangle(0, 25, 600, 400));
+        setPreferredSize(new java.awt.Dimension(625, 425));
         setSize(new java.awt.Dimension(600, 400));
         getContentPane().setLayout(null);
 
@@ -155,6 +155,7 @@ public class Scores extends javax.swing.JFrame {
         Score4.setBounds(420, 280, 40, 30);
 
         jPanel1.setMinimumSize(new java.awt.Dimension(300, 200));
+        jPanel1.setPreferredSize(new java.awt.Dimension(325, 225));
         jPanel1.setSize(new java.awt.Dimension(300, 200));
         jPanel1.setLayout(null);
 
@@ -168,7 +169,7 @@ public class Scores extends javax.swing.JFrame {
         Name.setBounds(110, 80, 64, 23);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(10, 20, 300, 200);
+        jPanel1.setBounds(0, 0, 300, 200);
 
         pack();
         setLocationRelativeTo(null);
