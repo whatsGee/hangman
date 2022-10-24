@@ -48,6 +48,7 @@ public class Scores extends javax.swing.JFrame {
         newScore = score;
         InOut(newScore);
         jPanel1.setVisible(false);
+        
     }
 
     /**
@@ -74,7 +75,7 @@ public class Scores extends javax.swing.JFrame {
         Score4 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        Name = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Scoreboard");
@@ -158,11 +159,11 @@ public class Scores extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel2.setText("What is your name?");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(190, 130, 210, 50);
+        jLabel2.setBounds(80, 30, 210, 50);
 
-        jLabel4.setText("jLabel4");
-        jPanel1.add(jLabel4);
-        jLabel4.setBounds(230, 190, 70, 40);
+        Name.setText("Name");
+        jPanel1.add(Name);
+        Name.setBounds(110, 80, 64, 23);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(10, 20, 590, 380);
@@ -259,26 +260,57 @@ public class Scores extends javax.swing.JFrame {
             printScore5();
         }
     }
+    public void Initial(){
+        Scores[0] = highScore1;
+        Scores[1] = highScore2;
+        Scores[2] = highScore3;
+        Scores[3] = highScore4;
+        Scores[4] = highScore5;
+    }
     public void InOut(int score){
         newScore = score;
+        Initial();
         for(int i = 0; i<Scores.length; i++){
                 if(Scores[i] == null){
                     newentry = i;
                     Scores[newentry] = newScore;
                     setScore();
-                    dispose();
-                    new ColorGame(newScore,false).setVisible(true);
+                    jPanel1.setVisible(true);
                     break;
                 }
                 else if(Scores[i] < newScore){
-                    compare();
+                    newentry = i;
+                    pop();
+                    jPanel1.setVisible(true);
                     break;
                 }
                 else {
-                    dispose();
-                    new ColorGame(newScore,false).setVisible(true);
                     break;
                 }    
+        }
+    }
+    
+    public void getNames(){
+        String textFieldValue = Name.getText();
+        if(newentry == 0){
+            Name1 = textFieldValue;
+            printname1();
+        }
+        else if(newentry == 1){
+            Name2 = textFieldValue;
+            printname2();
+        }
+        else if(newentry == 2){
+            Name3 = textFieldValue;
+            printname3();
+        }
+        else if(newentry == 3){
+            Name4 = textFieldValue;
+            printname4();
+        }
+        else if(newentry == 4){
+            Name5 = textFieldValue;
+            printname5();
         }
     }
     public void compare(){
@@ -303,7 +335,7 @@ public class Scores extends javax.swing.JFrame {
         int temp = Scores[newentry];
         int temp2;
         Scores[newentry] = newScore;
-        for(int i = newentry;i<Scores.length;i++){
+        for(int i = newentry; i < Scores.length; i++){
             temp2 = Scores[i + 1];
             Scores[i + 1] = temp;
             temp = temp2;
@@ -325,7 +357,23 @@ public class Scores extends javax.swing.JFrame {
     public void printScore5(){
     Score5.setText(String.valueOf(highScore5));
     }
+    public void printname1(){
+    name1.setText(Name1);
+    }
+    public void printname2(){
+    name2.setText(Name2);
+    }
+    public void printname3(){
+    name3.setText(Name3);
+    }
+    public void printname4(){
+    name4.setText(Name4);
+    }
+    public void printname5(){
+    name5.setText(Name5);
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Name;
     public javax.swing.JLabel Score1;
     public javax.swing.JLabel Score2;
     public javax.swing.JLabel Score3;
@@ -335,7 +383,6 @@ public class Scores extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     public javax.swing.JLabel name1;
     public javax.swing.JLabel name2;
