@@ -60,6 +60,7 @@ public class Menu extends javax.swing.JFrame {
         scoreButton = new javax.swing.JButton();
         creditButton = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
+        PongButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Hangman by iDesign");
@@ -81,7 +82,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(playButton);
-        playButton.setBounds(206, 148, 170, 29);
+        playButton.setBounds(206, 148, 170, 28);
 
         scoreButton.setBackground(new java.awt.Color(153, 153, 153));
         scoreButton.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
@@ -94,7 +95,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(scoreButton);
-        scoreButton.setBounds(206, 195, 170, 29);
+        scoreButton.setBounds(206, 195, 170, 28);
 
         creditButton.setBackground(new java.awt.Color(153, 153, 153));
         creditButton.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
@@ -107,20 +108,37 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(creditButton);
-        creditButton.setBounds(206, 242, 170, 29);
+        creditButton.setBounds(206, 242, 170, 28);
 
         jPanel1.setBackground(new java.awt.Color(102, 153, 255));
         jPanel1.setForeground(new java.awt.Color(153, 153, 255));
+
+        PongButton.setBackground(new java.awt.Color(153, 153, 153));
+        PongButton.setFont(new java.awt.Font("Maiandra GD", 1, 18)); // NOI18N
+        PongButton.setForeground(new java.awt.Color(255, 255, 255));
+        PongButton.setText("PLAY PONG");
+        PongButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        PongButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PongButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(205, 205, 205)
+                .addComponent(PongButton, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(225, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(287, Short.MAX_VALUE)
+                .addComponent(PongButton)
+                .addGap(85, 85, 85))
         );
 
         getContentPane().add(jPanel1);
@@ -144,6 +162,12 @@ public class Menu extends javax.swing.JFrame {
         dispose();
         new Credits().setVisible(true);  // TODO add your handling code here:
     }//GEN-LAST:event_creditButtonActionPerformed
+
+    private void PongButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PongButtonActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        new PingPongGame().setVisible(true);
+    }//GEN-LAST:event_PongButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -182,6 +206,7 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton PongButton;
     private javax.swing.JButton creditButton;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton playButton;
