@@ -117,6 +117,7 @@ public class PongGameplay extends JPanel implements Runnable{
         
         if(ball.x <= 0){
             scores.player2= scores.player2 + 10;
+            end();
             newPaddles();
             newBall();
             System.out.println("Player 2: " + scores.player2);
