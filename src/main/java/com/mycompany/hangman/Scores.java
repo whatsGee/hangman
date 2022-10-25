@@ -46,7 +46,20 @@ public class Scores extends javax.swing.JFrame {
     public Scores(int score) {
         initComponents();
         jPanel1.setVisible(false);
-        
+        InOut(score);
+        jLabel1.setVisible(false);
+        jLabel3.setVisible(false);
+        Score1.setVisible(false);
+        Score2.setVisible(false);
+        Score3.setVisible(false);
+        Score4.setVisible(false);
+        Score5.setVisible(false);
+        name1.setVisible(false);
+        name2.setVisible(false);
+        name3.setVisible(false);
+        name4.setVisible(false);
+        name5.setVisible(false);
+        backScores2.setVisible(false);
     }
 
     /**
@@ -164,12 +177,16 @@ public class Scores extends javax.swing.JFrame {
         jPanel1.add(jLabel2);
         jLabel2.setBounds(80, 30, 210, 50);
 
-        Name.setText("Name");
+        Name.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NameActionPerformed(evt);
+            }
+        });
         jPanel1.add(Name);
         Name.setBounds(110, 80, 64, 23);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 300, 200);
+        jPanel1.setBounds(160, 100, 300, 200);
 
         pack();
         setLocationRelativeTo(null);
@@ -179,6 +196,11 @@ public class Scores extends javax.swing.JFrame {
         dispose();
         new Menu().setVisible(true);    // TODO add your handling code here:
     }//GEN-LAST:event_backScores2ActionPerformed
+
+    private void NameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NameActionPerformed
+        NameValue = Name.getText();
+        getNames();
+    }//GEN-LAST:event_NameActionPerformed
 
     /**
      * @param args the command line arguments
@@ -221,6 +243,7 @@ public class Scores extends javax.swing.JFrame {
     private int highScore3;
     private int highScore4;
     private int highScore5;
+    private String NameValue;
     private String Name1;
     private String Name2;
     private String Name3;
@@ -293,25 +316,24 @@ public class Scores extends javax.swing.JFrame {
     }
     
     public void getNames(){
-        String textFieldValue = Name.getText();
         if(newentry == 0){
-            Name1 = textFieldValue;
+            Name1 = NameValue;
             printname1();
         }
         else if(newentry == 1){
-            Name2 = textFieldValue;
+            Name2 = NameValue;
             printname2();
         }
         else if(newentry == 2){
-            Name3 = textFieldValue;
+            Name3 = NameValue;
             printname3();
         }
         else if(newentry == 3){
-            Name4 = textFieldValue;
+            Name4 = NameValue;
             printname4();
         }
         else if(newentry == 4){
-            Name5 = textFieldValue;
+            Name5 = NameValue;
             printname5();
         }
     }

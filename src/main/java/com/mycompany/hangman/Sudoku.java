@@ -80,7 +80,6 @@ public class Sudoku extends javax.swing.JFrame {
         Exit2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(600, 700));
         setResizable(false);
 
         jButton1.setText("Quit");
@@ -211,7 +210,7 @@ public class Sudoku extends javax.swing.JFrame {
         jButton2.setVisible(false);
         jPanel1.setVisible(true);
         combinedscore = score + ColorGame.getScore();
-        Scores.InOut(combinedscore);
+        new Scores(combinedscore).setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void Exit2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Exit2ActionPerformed
