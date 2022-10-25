@@ -123,6 +123,7 @@ public class PongGameplay extends JPanel implements Runnable{
         }
         if(ball.x >= WIDTH - BALL){
             scores.player1= scores.player1 + 10;
+            end();
             newPaddles();
             newBall();
             System.out.println("Player 1: " + scores.player1);
@@ -130,7 +131,8 @@ public class PongGameplay extends JPanel implements Runnable{
     }
     public void end(){
         if (scores.player1 == 100 || scores.player2 == 100){
-            
+            setVisible(false);
+            new Menu().setVisible(true);
         }
     }
     @Override
