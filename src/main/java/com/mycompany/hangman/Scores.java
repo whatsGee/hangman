@@ -16,11 +16,11 @@ import javax.swing.KeyStroke;
  * @author Owner
  */
 public class Scores extends javax.swing.JFrame {
-
+   
     /**
      * Creates new form Scores
      */
-    public Scores() {
+        public Scores() {
         initComponents();
         jPanel1.setVisible(false);
                 KeyStroke exitKey = KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0, false);
@@ -43,6 +43,11 @@ public class Scores extends javax.swing.JFrame {
         getRootPane().getActionMap().put("F1", creditsAction);
     }
     
+    public Scores(String txt){
+        initComponents();
+        name1.setText(txt);
+    }
+
     public Scores(int score) {
         initComponents();
         jPanel1.setVisible(false);
@@ -60,6 +65,9 @@ public class Scores extends javax.swing.JFrame {
         name4.setVisible(false);
         name5.setVisible(false);
         backScores2.setVisible(false);
+        jPanel1.setVisible(true);
+        
+
     }
 
     /**
@@ -86,7 +94,8 @@ public class Scores extends javax.swing.JFrame {
         Score4 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        Name = new javax.swing.JTextField();
+        Names = new javax.swing.JTextField();
+        SaveButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Scoreboard");
@@ -167,23 +176,33 @@ public class Scores extends javax.swing.JFrame {
         getContentPane().add(Score4);
         Score4.setBounds(420, 280, 40, 30);
 
+        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
         jPanel1.setMinimumSize(new java.awt.Dimension(300, 200));
         jPanel1.setPreferredSize(new java.awt.Dimension(325, 225));
         jPanel1.setSize(new java.awt.Dimension(300, 200));
         jPanel1.setLayout(null);
 
-        jLabel2.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
-        jLabel2.setText("What is your name?");
+        jLabel2.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jLabel2.setText("Enter your name:");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(80, 30, 210, 50);
+        jLabel2.setBounds(10, 70, 140, 50);
 
-        Name.addActionListener(new java.awt.event.ActionListener() {
+        Names.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NameActionPerformed(evt);
+                NamesActionPerformed(evt);
             }
         });
-        jPanel1.add(Name);
-        Name.setBounds(110, 80, 64, 23);
+        jPanel1.add(Names);
+        Names.setBounds(130, 80, 130, 30);
+
+        SaveButton.setText("Save");
+        SaveButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SaveButtonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(SaveButton);
+        SaveButton.setBounds(110, 140, 78, 23);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(160, 100, 300, 200);
@@ -197,10 +216,18 @@ public class Scores extends javax.swing.JFrame {
         new Menu().setVisible(true);    // TODO add your handling code here:
     }//GEN-LAST:event_backScores2ActionPerformed
 
-    private void NameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NameActionPerformed
-        NameValue = Name.getText();
+    private void NamesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NamesActionPerformed
+        NameValue = Names.getText();
         getNames();
-    }//GEN-LAST:event_NameActionPerformed
+    }//GEN-LAST:event_NamesActionPerformed
+
+    private void SaveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveButtonActionPerformed
+        // TODO add your handling code here:
+        String txt = Names.getText();
+        new Scores(txt).setVisible(true);
+        setVisible(false);
+        jPanel1.setVisible(false);
+    }//GEN-LAST:event_SaveButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -397,7 +424,8 @@ public class Scores extends javax.swing.JFrame {
     name5.setText(Name5);
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField Name;
+    private javax.swing.JTextField Names;
+    private javax.swing.JButton SaveButton;
     public javax.swing.JLabel Score1;
     public javax.swing.JLabel Score2;
     public javax.swing.JLabel Score3;
