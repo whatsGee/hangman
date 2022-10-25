@@ -116,19 +116,23 @@ public class PongGameplay extends JPanel implements Runnable{
             paddle2.y = HEIGHT - PADDLE_HEIGHT;
         
         if(ball.x <= 0){
-            scores.player2++;
+            scores.player2= scores.player2 + 10;
             newPaddles();
             newBall();
             System.out.println("Player 2: " + scores.player2);
         }
         if(ball.x >= WIDTH - BALL){
-            scores.player1++;
+            scores.player1= scores.player1 + 10;
             newPaddles();
             newBall();
             System.out.println("Player 1: " + scores.player1);
         }
     }
-    
+    public void end(){
+        if (scores.player1 == 100 || scores.player2 == 100){
+            
+        }
+    }
     @Override
     public void run(){
         long lastTime = System.nanoTime();

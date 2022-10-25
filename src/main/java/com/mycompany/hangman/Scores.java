@@ -45,7 +45,20 @@ public class Scores extends javax.swing.JFrame {
     
     public Scores(String txt){
         initComponents();
-        name1.setText(txt);
+        jPanel1.setVisible(false);
+        jLabel1.setVisible(false);
+        jLabel3.setVisible(false);
+        Score1.setVisible(false);
+        Score2.setVisible(false);
+        Score3.setVisible(false);
+        Score4.setVisible(false);
+        Score5.setVisible(false);
+        name1.setVisible(false);
+        name2.setVisible(false);
+        name3.setVisible(false);
+        name4.setVisible(false);
+        name5.setVisible(false);
+        backScores2.setVisible(false);
     }
 
     public Scores(int score) {
@@ -65,7 +78,6 @@ public class Scores extends javax.swing.JFrame {
         name4.setVisible(false);
         name5.setVisible(false);
         backScores2.setVisible(false);
-        jPanel1.setVisible(true);
         
 
     }
@@ -219,14 +231,15 @@ public class Scores extends javax.swing.JFrame {
     private void NamesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NamesActionPerformed
         NameValue = Names.getText();
         getNames();
+        System.out.println(Name1 + highScore1);
     }//GEN-LAST:event_NamesActionPerformed
 
     private void SaveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveButtonActionPerformed
         // TODO add your handling code here:
-        String txt = Names.getText();
-        new Scores(txt).setVisible(true);
+        NameValue = Names.getText();
+        getNames();
         setVisible(false);
-        jPanel1.setVisible(false);
+        System.out.println(Name1 + highScore1);
     }//GEN-LAST:event_SaveButtonActionPerformed
 
     /**
