@@ -210,7 +210,6 @@ public class Sudoku extends javax.swing.JFrame {
         jButton2.setVisible(false);
         jPanel1.setVisible(true);
         combinedscore = score + ColorGame.getScore();
-        Scores.InOut(combinedscore);
         new Scores(combinedscore).setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -219,6 +218,7 @@ public class Sudoku extends javax.swing.JFrame {
         this.setVisible(false);
         score = 0;
         combinedscore = score + ColorGame.getScore();
+        Scores.InOut(combinedscore);
         new Credits().setVisible(true);
     }//GEN-LAST:event_Exit2ActionPerformed
 

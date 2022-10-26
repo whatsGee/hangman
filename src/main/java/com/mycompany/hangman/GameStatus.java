@@ -9,5 +9,5 @@ package com.mycompany.hangman;
  * @author Gian
  */
 public enum GameStatus{
-    GIVEN, INPUT, CORRECT, WRONG
+    GIVEN, INPUT, CORRECT, WRONG , TRYAGAIN
 }

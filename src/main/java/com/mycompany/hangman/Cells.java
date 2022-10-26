@@ -20,7 +20,7 @@ public class Cells extends JTextField {
     public static final Color bgCorrect = new Color(0,200,0);
     public static final Color bgWrong = new Color (200, 0,0);
     public static final Font numbers = new Font("Copperplate Gothic Bold", Font.BOLD, 28);
-    
+    public static final Color TRYAGAIN = Color.YELLOW;
     int row;
     int col;
     int number;
@@ -59,6 +59,9 @@ public class Cells extends JTextField {
         }
         else if(status == GameStatus.WRONG){
             super.setBackground(bgWrong);
+        }
+        else if(status == GameStatus.TRYAGAIN){
+            super.setBackground(TRYAGAIN);
         }
     }
 }

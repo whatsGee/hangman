@@ -73,6 +73,9 @@ public class Board extends JPanel {
                 source.status = GameStatus.CORRECT;
                 Score = Score +10;
             }
+            else if (numInput < 1 || numInput > 9){
+                source.status = GameStatus.TRYAGAIN;
+            }
             else
                 source.status = GameStatus.WRONG;
             source.paint();
