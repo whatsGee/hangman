@@ -18,7 +18,7 @@ public class Board extends JPanel {
     public static final int CELLS = 60;
     public static final int BOARD_WIDTH = CELLS * GRID_SIZE;
     public static final int BOARD_HEIGHT = CELLS * GRID_SIZE;
-    public int Score = 540;
+    public int Score = 0;
     
     private Cells[][] cells  = new Cells[GRID_SIZE][GRID_SIZE];
     private Gameplay game = new Gameplay();
@@ -69,11 +69,12 @@ public class Board extends JPanel {
             int numInput = Integer.parseInt(source.getText());
             System.out.println("Input: " + numInput);
             
-            if(numInput == source.number)
+            if(numInput == source.number){
                 source.status = GameStatus.CORRECT;
+                Score = Score +10;
+            }
             else
                 source.status = GameStatus.WRONG;
-                Score = Score -10;
             source.paint();
         }
     }

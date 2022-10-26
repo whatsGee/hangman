@@ -23,6 +23,16 @@ public class Scores extends javax.swing.JFrame {
         public Scores() {
         initComponents();
         jPanel1.setVisible(false);
+        printScore1();
+        printScore2();
+        printScore3();
+        printScore4();
+        printScore5();
+        printname1();
+        printname2();
+        printname3();
+        printname4();
+        printname5();
                 KeyStroke exitKey = KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0, false);
         Action exitAction = new AbstractAction(){
             public void actionPerformed(ActionEvent e){
