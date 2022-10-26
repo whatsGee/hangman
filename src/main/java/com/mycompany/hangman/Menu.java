@@ -166,7 +166,7 @@ public class Menu extends javax.swing.JFrame {
     private void PongButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PongButtonActionPerformed
         // TODO add your handling code here:
         dispose();
-        Table frame = new Table();
+        new PingPongGame().setVisible(true);
     }//GEN-LAST:event_PongButtonActionPerformed
 
     /**
